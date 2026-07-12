@@ -307,6 +307,7 @@ const I18N = (function() {
     dict['uretim.card2.desc']        = { tr: 'Swab katlama ve paketleme sistemi. PLC kontrollü, vakum destekli transfer ünitesi.', en: 'Swab folding and packaging system. PLC-controlled, vacuum-assisted transfer unit.' };
     dict['uretim.card3.title']       = { tr: 'Hemostatik Gaz Kompres', en: 'Hemostatic Gas Compress' };
     dict['uretim.card3.desc']        = { tr: 'Antiseptik ve hemostatik özellikli medikal gaz kompres sistemi.', en: 'Medical gas compress system with antiseptic and hemostatic properties.' };
+    dict['uretim.products.heading']  = { tr: 'Üretim <span class="highlight">Ürünlerimiz</span>', en: 'Production <span class="highlight">Products</span>' };
 
     // --- erweka.html ---
     dict['erweka.back']              = { tr: 'Üretim Sayfasına Dön', en: 'Back to Production' };

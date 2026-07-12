@@ -19,6 +19,7 @@
         ['Üretim Sayfasına Dön', 'Back to Production'],
         ['Sentez Sayfasına Dön', 'Back to Synthesis'],
         ['Ürünlerimizi Keşfedin', 'Discover Our Products'],
+        ['Ürünlerimiz', 'Our Products'],
         ['Bize Ulaşın', 'Contact Us'],
         ['Aşağı Kaydır', 'Scroll Down'],
         ['Detaylı Bilgi', 'Learn More'],
@@ -1331,6 +1332,10 @@
                     }
                     const text = node.textContent.trim();
                     if (!text || text.length < 2) return NodeFilter.FILTER_REJECT;
+                    // Skip email addresses and phone/fax numbers
+                    if (/@/.test(text) || /^\(?\d{3,4}\)?\s*\d{3}\s*\d{2}\s*\d{2}$/.test(text.trim())) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
                     return NodeFilter.FILTER_ACCEPT;
                 }
             }
