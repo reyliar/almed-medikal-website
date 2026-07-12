@@ -492,22 +492,19 @@ const I18N = (function() {
         // Don't inject if already exists
         if (topBarInner.querySelector('.lang-switcher')) return;
 
+        // Get current page filename
+        const path = window.location.pathname;
+        const filename = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+        const enUrl = 'en/' + filename;
+
         const switcher = document.createElement('div');
         switcher.className = 'lang-switcher';
         switcher.innerHTML = `
-            <button class="lang-switch-btn active" data-lang="tr" aria-label="Türkçe">TR</button>
+            <button class="lang-switch-btn active" aria-label="Türkçe">TR</button>
             <span class="lang-divider">|</span>
-            <button class="lang-switch-btn" data-lang="en" aria-label="English">EN</button>
+            <a href="${enUrl}" class="lang-switch-btn" aria-label="English">EN</a>
         `;
         topBarInner.appendChild(switcher);
-
-        // Add event listeners
-        switcher.querySelectorAll('.lang-switch-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                const lang = btn.getAttribute('data-lang');
-                if (lang) applyLang(lang);
-            });
-        });
     }
 
     /** Initialize the i18n system */

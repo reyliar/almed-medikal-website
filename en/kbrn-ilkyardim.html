@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CBRN First Aid Kit; IP65 taşıma çantası, Fullers Earth dekontaminasyon tozu, dekontaminasyon eldiveni, serum, maske, eldiven ve medikal sarflardan oluşan saha müdahale seti.">
+    <title>CBRN First Aid Kit - Almed Medikal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .detail-hero,
+        .detail-content,
+        .led-bar,
+        .footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        .detail-hero {
+            background: var(--gradient-hero);
+            padding: 124px 32px 56px;
+        }
+
+        .detail-hero .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: .9rem;
+            margin-bottom: 26px;
+            transition: gap .2s;
+        }
+
+        .detail-hero .back-link:hover {
+            gap: 12px;
+        }
+
+        .hero-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr);
+            gap: 44px;
+            align-items: center;
+        }
+
+        .hero-kicker,
+        .section-kicker,
+        .item-number {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            background: var(--primary-bg);
+            border-radius: var(--radius-full);
+            padding: 6px 14px;
+            font-size: .75rem;
+            font-weight: 800;
+            letter-spacing: 0;
+        }
+
+        .detail-hero h1 {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4.4vw, 3.25rem);
+            line-height: 1.12;
+            margin: 16px 0 16px;
+            color: var(--text-primary);
+            letter-spacing: 0;
+        }
+
+        .detail-hero p {
+            max-width: 700px;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.75;
+            margin-bottom: 24px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: 1.5px solid var(--border-medium);
+            border-radius: var(--radius-full);
+            padding: 12px 20px;
+            background: var(--white);
+            color: var(--primary);
+            text-decoration: none;
+            font-size: .9rem;
+            font-weight: 700;
+            transition: all .2s var(--ease-out);
+        }
+
+        .hero-action.primary {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: var(--white);
+        }
+
+        .hero-action:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .hero-visual {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            min-height: 360px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 32px;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .hero-visual img {
+            max-width: 100%;
+            max-height: 330px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .detail-content {
+            padding: 44px 32px 86px;
+        }
+
+        .quick-specs {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 14px;
+            margin-bottom: 44px;
+        }
+
+        .quick-spec {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 18px;
+            box-shadow: var(--shadow-sm);
+            min-height: 112px;
+        }
+
+        .quick-spec i {
+            color: var(--primary);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+        }
+
+        .quick-spec span {
+            display: block;
+            color: var(--text-muted);
+            font-size: .72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0;
+        }
+
+        .quick-spec strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: 1rem;
+            line-height: 1.35;
+            margin-top: 4px;
+        }
+
+        .content-band {
+            margin-top: 34px;
+        }
+
+        .kit-section-head {
+            max-width: 780px;
+            margin-bottom: 22px;
+        }
+
+        .kit-section-head h2 {
+            font-family: var(--font-heading);
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            line-height: 1.2;
+            margin: 12px 0 10px;
+            letter-spacing: 0;
+        }
+
+        .kit-section-head p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .overview-panel {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 22px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .overview-panel i {
+            color: var(--primary);
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .overview-panel h3 {
+            font-family: var(--font-heading);
+            font-size: 1.04rem;
+            margin-bottom: 8px;
+            letter-spacing: 0;
+        }
+
+        .overview-panel p {
+            color: var(--text-secondary);
+            font-size: .9rem;
+            line-height: 1.65;
+        }
+
+        .kit-items {
+            display: grid;
+            gap: 18px;
+            margin-top: 22px;
+        }
+
+        .kit-item {
+            display: grid;
+            grid-template-columns: 240px minmax(0, 1fr);
+            gap: 24px;
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .kit-media {
+            border-radius: 8px;
+            background: linear-gradient(135deg, #f8fafc 0%, #eef6ff 100%);
+            min-height: 190px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px;
+            overflow: hidden;
+        }
+
+        .kit-media img {
+            width: 100%;
+            max-height: 180px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .kit-body h3 {
+            font-family: var(--font-heading);
+            color: var(--text-primary);
+            font-size: 1.12rem;
+            line-height: 1.35;
+            margin: 10px 0 8px;
+            letter-spacing: 0;
+        }
+
+        .kit-body p {
+            color: var(--text-secondary);
+            font-size: .93rem;
+            line-height: 1.72;
+            margin-bottom: 12px;
+        }
+
+        .spec-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .spec-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: .84rem;
+            line-height: 1.55;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 9px 10px;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        .spec-list i {
+            color: var(--primary);
+            margin-top: 4px;
+            font-size: .7rem;
+            flex: 0 0 auto;
+        }
+
+        .note-panel {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            margin-top: 22px;
+            padding: 18px 20px;
+            background: #fff7ed;
+            border: 1px solid #fed7aa;
+            border-radius: 8px;
+            color: #7c2d12;
+            line-height: 1.65;
+        }
+
+        .note-panel i {
+            margin-top: 4px;
+            color: #ea580c;
+        }
+
+        .certificate-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .certificate-card {
+            background: var(--white);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .certificate-card img {
+            width: 100%;
+            height: 110px;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 12px;
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 8px;
+        }
+
+        .certificate-card strong {
+            display: block;
+            color: var(--text-primary);
+            font-size: .9rem;
+            line-height: 1.35;
+            margin-bottom: 4px;
+        }
+
+        .certificate-card span {
+            color: var(--text-secondary);
+            font-size: .78rem;
+            line-height: 1.5;
+            display: block;
+        }
+
+        .source-panel {
+            margin-top: 36px;
+            background: var(--text-primary);
+            color: var(--white);
+            border-radius: 8px;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 18px;
+            align-items: center;
+        }
+
+        .source-panel p {
+            color: rgba(255,255,255,.72);
+            line-height: 1.65;
+            margin-top: 4px;
+            font-size: .92rem;
+        }
+
+        .source-panel a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary);
+            background: var(--white);
+            text-decoration: none;
+            border-radius: var(--radius-full);
+            padding: 12px 18px;
+            font-weight: 800;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-layout,
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-specs,
+            .certificate-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 760px) {
+            .detail-hero {
+                padding: 104px 20px 38px;
+            }
+
+            .detail-content {
+                padding: 32px 20px 64px;
+            }
+
+            .hero-layout,
+            .kit-item,
+            .source-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-visual {
+                min-height: 260px;
+            }
+
+            .quick-specs,
+            .certificate-grid,
+            .spec-list {
+                grid-template-columns: 1fr;
+            }
+
+            .source-panel a {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader"><img src="favicon.png" alt="Almed Medikal" class="preloader-logo"><div class="preloader-bar"></div></div>
+
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span><i class="fa-solid fa-phone"></i> (0312) 311 50 14</span>
+            <span><i class="fa-solid fa-envelope"></i> iletisim@almedmedikal.com.tr</span>
+                <div class="lang-switcher">
+            <a href="../kbrn-ilkyardim.html" class="lang-switch-btn active">TR</a>
+            <span class="lang-divider">|</span>
+            <a href="#" class="lang-switch-btn">EN</a>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="images/logosirketisimli.png" alt="Almed Medikal"></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#neden-biz">Corporate</a></li>
+                <li><a href="urunler.html" class="active btn-nav">Products</a></li>
+                <li><a href="iletisim.html">Contact</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="led-bar led-bar-top"><div class="led-beam"></div></div>
+
+    <section class="detail-hero">
+        <div class="container">
+            <a href="urunler.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Product Catalog</a>
+            <div class="hero-layout">
+                <div>
+                    <span class="hero-kicker"><i class="fa-solid fa-shield-virus"></i> <span>CBRN Decontamination & First Aid</span></span>
+                    <h1>CBRN First Aid Kit</h1>
+                    <p>Kimyasal, biyolojik, radyolojik ve nükleer saha risklerinde ilk müdahale ekiplerinin taşıma, kişisel koruma, yüzey dekontaminasyonu, göz/nazal temizleme, kurulama ve temel medikal sarf ihtiyaçlarını tek set içinde karşılamak üzere hazırlanmış profesyonel kit.</p>
+                    <div class="hero-actions">
+                        <a class="hero-action primary" href="#kit-icerigi"><i class="fa-solid fa-list-check"></i> Kit Contents</a>
+                        <a class="hero-action" href="#belge-standart"><i class="fa-solid fa-certificate"></i> Documents & Standards</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/kbrn-ilkyardim-cantasi.png" alt="CBRN First Aid Kit">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="container">
+            <div class="quick-specs reveal">
+                <div class="quick-spec">
+                    <i class="fa-solid fa-suitcase-medical"></i>
+                    <span>Kit Scope</span>
+                    <strong>13 ürün öğesi</strong>
+                </div>
+                <div class="quick-spec">
+                    <i class="fa-solid fa-droplet-slash"></i>
+                    <span>Case Protection</span>
+                    <strong>IP65 class hard PP body</strong>
+                </div>
+                <div class="quick-spec">
+                    <i class="fa-solid fa-ruler-combined"></i>
+                    <span>External Dimensions</span>
+                    <strong>340 x 275 x 124 mm</strong>
+                </div>
+                <div class="quick-spec">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <span>Julperature</span>
+                    <strong>-30°C to +90°C</strong>
+                </div>
+            </div>
+
+            <section class="content-band reveal">
+                <div class="kit-section-head">
+                    <span class="section-kicker"><i class="fa-solid fa-layer-group"></i> Operational Scope</span>
+                    <h2>Decontamination, Protection & Medical Supplies in One Case</h2>
+                    <p>Ürün seti; dayanıklı taşıma çantası, Fullers Earth bazlı emici/dekontaminasyon ürünleri, dezenfektan ve yüzey temizleme solüsyonları, göz/nazal temizlik tüpleri, steril sarflar, fırça, eldiven ve FFP2 maske bileşenlerini kapsar.</p>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-panel">
+                        <i class="fa-solid fa-box-open"></i>
+                        <h3>Transport & Storage</h3>
+                        <p>IP65 sınıfı polipropilen çanta; darbe, toz ve su püskürtmesine karşı koruma sağlayacak şekilde saha koşullarına uygun olarak belirtilmiştir.</p>
+                    </div>
+                    <div class="overview-panel">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                        <h3>Decontamination</h3>
+                        <p>Tozlu dekontaminasyon eldiveni, 150 ml Fullers Earth şişesi ve kimyasal/radyolojik dekontaminasyon mendilleri yüzey, ekipman ve kişisel kullanım senaryolarına destek verir.</p>
+                    </div>
+                    <div class="overview-panel">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <h3>Personal Protection</h3>
+                        <p>Vinil eldivenler, FFP2 NR D valfli maske, steril gaz kompres ve tek kullanımlık havlu gibi sarflar müdahale sonrası temizlik ve koruma düzenini tamamlar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-band" id="kit-icerigi">
+                <div class="kit-section-head reveal">
+                    <span class="section-kicker"><i class="fa-solid fa-clipboard-check"></i> Kit Contents</span>
+                    <h2>CBRN First Aid Kit Contents</h2>
+                    <p>Aşağıdaki içerik, ürün setindeki öğeler ve teknik açıklamalar temel alınarak kullanıcıya dönük sıralı bir yapı ile hazırlanmıştır.</p>
+                </div>
+
+                <div class="kit-items">
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/tasima-cantasi.png" alt="IP65 dekontaminasyon kiti taşıma çantası" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 01</span>
+                            <h3>Decontamination Kit Carry Case</h3>
+                            <p>Darbeye dayanıklı, sert polipropilen taşıma çantası; pahalı ve hassas ekipmanların saha, polis, askeri, keşif ve bilimsel araştırma gibi zorlu kullanım alanlarında korunması için tasarlanmıştır.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>İç ölçü: 335 x 250 x 122 mm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Dış ölçü: 340 x 275 x 124 mm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Malzeme: PP, polipropilen enjeksiyon gövde</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Koruma sınıfı: IP65</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Julperature dayanımı: -30°C / +90°C</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Yüksek darbe dayanımı ve kırılmaya dirençli yapı</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/dekontaminasyon-eldiveni.png" alt="Kimyasal ve radyoaktif dekontaminasyon eldiveni" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 02</span>
+                            <h3>Kimyasal ve Radyoaktif Decontamination Pudra Eldiveni</h3>
+                            <p>Polyethylene destekli ped içinde pudra bulunan bireysel dekontaminasyon eldiveni, kullanıcının mevcut koruyucu eldiveninin üzerine geçirilerek ekipman ve yüzeylere hızlı pudra uygulaması sağlar.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Hafif, tekli ambalajlı ve kullanıma hazır form</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Taşınabilir küçük form faktörü</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Sıvı kontaminasyon üzerinde güvenli uygulama amacı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Yüzey dekontaminasyon kapasitesi: 1 m²’ye kadar</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Julizlik kapasitesi hesabı: 10 g/m² toprak/kirlilik seviyesi</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Asker, acil müdahale ekibi ve saha personeli kullanımı için uygundur</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/fullers-earth-sise.png" alt="150 ml Fullers Earth dekontaminasyon tozu şişesi" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 03</span>
+                            <h3>150 ml Fullers Earth Decontamination Tozu</h3>
+                            <p>Doğal sedimanter kil yapısındaki modifiye Fullers Earth; yüzey, cilt, kıyafet ve ayakkabı üzerindeki ajanların fiziksel absorpsiyonu için kullanılır. Askeri ekipmanın temel parçası olarak saha CBRN olaylarında kişisel koruma amacıyla kullanılabilir.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Contents: 150 ml Fullers Earth</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Bileşim: alumina, silika, demir oksitleri, kireç, magnezya ve su</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>%100 doğal Fullers Earth bazlı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Yüksek kimyasal emicilik ve hızlı etki</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Elle kolay uygulama ve uzun süreli depolama stabilitesi</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>MSDS dokümanı ile sağlanır; NSN: 6505-27-014-1446</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/dil-basacagi.png" alt="Steril ahşap dil basacağı" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 04</span>
+                            <h3>Steril Ahşap Dil Basacağı</h3>
+                            <p>Özel ahşaptan üretilmiş, temizlenmiş ve zımparalanmış steril dil basacağı; muayene ve ilk değerlendirme sırasında tek kullanımlık hijyenik sarf olarak kit içinde yer alır.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Malzeme: özel ahşap</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Julizlenmiş ve zımparalanmış yüzey</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Tekli steril ambalaj seçeneği</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Genişlik: 18 mm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Uzunluk: 150 mm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>100 adetlik paket bilgisi</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/dezenfektan-solusyon.png" alt="Dezenfektan yıkama solüsyonu şişesi" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 05</span>
+                            <h3>Dezenfektan Yıkama Solüsyonu</h3>
+                            <p>Klorheksidin ve etanol içeren hipoalerjenik yıkama solüsyonu; hijyenik ve cerrahi el yıkama amacıyla tanımlanmış biyosidal üründür.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Aktif madde: Klorheksidin diglukonat %4</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>CAS No: 18472-51-0</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Etanol oranı: %5</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>CAS No: 64-17-5</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Hipoalerjenik formül bilgisi</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Sağlık Bakanlığı üretim izin belgesi bilgisi</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/agir-kir-yag-temizleyici.png" alt="200 ml ağır kir ve yağ sökücü temizleyici" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 06</span>
+                            <h3>200 ml Ağır Kir, Yağ ve Yapışkan Kalıntı Julizleyici</h3>
+                            <p>Yağlı, toksik ve güçlü tutunan ürün kalıntıları için doğrudan yüzeye uygulanacak temizlik solüsyonu olarak tanımlanmıştır. Application miktarı kir, yağ ve gres yoğunluğuna göre belirlenir; fırça ile uygulanıp bol su ile durulanır.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Hacim: 200 ml</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Yüzey uygulaması için temizlik solüsyonu</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Alüminyum ve yumuşak metal yüzeylerde kullanılmamalıdır</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Asit içeren ürünlerden uzak tutulmalıdır</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>El ve vücut temizliği için uygun değildir</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Usageda koruyucu eldiven ve gözlük önerilir</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Tarım Bakanlığı üretim izin belgesi bilgisi</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/serum-fizyolojik-tupleri.png" alt="5 ml serum fizyolojik plastik vial tüpleri" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 07</span>
+                            <h3>5 ml Göz ve Burun Julizliği İçin Serum Fizyolojik Tüpleri</h3>
+                            <p>Tek doz plastik vial formunda, burun ve göz temizliği için tanımlanan hipertonik oftalmik sodyum klorür çözeltisidir. Klinik kullanımın hekim talimatına göre yapılması gerekir.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Form: 5 ml plastik vial, tek doz</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Aktif madde: Sodyum klorür 50 mg/ml</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Konsantrasyon: %5 sodyum klorür</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Farmasötik form: berrak, renksiz, partikülsüz göz damlası</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Application öncesi el temizliği ve uç kontaminasyonundan kaçınma notu</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Usage, kurum/hekim talimatına göre yapılmalıdır</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/nonwoven-havlu.png" alt="Tekli paketli dekontaminasyon mendili" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 08</span>
+                            <h3>Kimyasal ve Radyolojik Decontamination Mendili</h3>
+                            <p>Kimyasal ve radyolojik maddelerin iz kontaminasyonunu cilt ve çeşitli yüzeylerden uzaklaştırmak için tanımlanan tekli paketli mendil çözümüdür. Sert yüzeylerde dairesel hareketle uygulanması ve dekontaminasyon eldivenleriyle birlikte kullanılabilmesi belirtilir.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Malzeme: %100 rayon</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Mendil ölçüsü: 25.4 x 30.5 cm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Paket ölçüsü: 10 x 12.7 cm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Kutu bilgisi: 300 adet, tekli ambalaj</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Usage sıcaklığı: 0°C / +70°C</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Raf ömrü: açılmamış ambalajda 5 yıl; EAR99 bilgisi</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Contents: su, magnezyum oksit, titanyum dioksit, çinko oksit, etoksillenmiş alkoller</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>HD ve VX iz kontaminasyonuna karşı hızlı nötralizasyon bilgisi</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/cerrahi-tirnak-fircasi.png" alt="Otoklavlanabilir steril tırnak ve cerrahi fırça" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 09</span>
+                            <h3>Otoklavlanabilir Steril Tırnak ve Cerrahi Fırça</h3>
+                            <p>Tırnak ve cerrahi alet temizliği için kullanılan, tekrar kullanılabilir ve otoklavlanabilir fırçadır. 121°C yüksek sıcaklık ve basınç sterilizasyonunda deformasyona dirençli plastik yapı bilgisi verilir.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Tırnak, el ve cerrahi alet temizliği için kullanılır</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Otoklavlanabilir ve tekrar kullanıma uygundur</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Sert naylon kıllar etkin temizlik için tasarlanmıştır</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Ergonomik ve emici olmayan tutma yüzeyi</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Medikal personel, klinisyen, cerrah ve saha kullanımı için uygundur</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>EC Certificate bilgisi</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/steril-gaz-kompres.png" alt="10 x 10 cm steril gaz kompres" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 10</span>
+                            <h3>10 x 10 cm Steril Gaz Kompres Bandaj</h3>
+                            <p>Kapalı ambalaj içinde steril sunulan gaz kompres; yara bakımında, tampon uygulamasında, yara temizliğinde, kanama kontrol desteğinde ve operasyon sonrası doku üzerindeki kanın tamponlanmasında kullanılır.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Malzeme: %100 pamuk</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Boyut: 10 x 10 cm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Kapalı steril ambalaj</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Yara bakımında pratik ve hijyenik kullanım</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Tampon ve yara temizliği amacıyla kullanılabilir</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Yaygın ölçüler: 5 x 5, 7.5 x 7.5 ve 10 x 10 cm</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/nonwoven-havlu.png" alt="Tek kullanımlık spun-lace havlu" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 11</span>
+                            <h3>Tek Usagelık Nonwoven Spun-Lace Havlu</h3>
+                            <p>Beyaz renkli tek kullanımlık havlu; HDPE TG pad olarak tanımlanan, yapışkanla bağlanmış iki katmanlı yapıya ve emici lif karışımına sahip sarf malzemedir.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Ölçü: 100 mm x 400 mm</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Renk: beyaz</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Üst katman: hijyen onaylı beyaz HDPE</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Emici katman: emici ve bağlayıcı lif karışımı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Maksimum emicilik aralığı: 1500-1600 cc/m²</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Nominal ped emiciliği: 128.0 cm³</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/vinil-eldiven.png" alt="Pudrasız vinil eldiven" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 12</span>
+                            <h3>Julizlik Sonrası Toplama İçin Vinil Eldiven Çifti</h3>
+                            <p>Lateks içermeyen, pudrasız ve tek kullanımlık sentetik vinil eldiven; temizlik sonrası düzenleme, toplama ve hassasiyet gerektiren koruma işlerinde kullanılmak üzere tanımlanmıştır.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Steril değildir ve pudra içermez</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Sentetik vinil malzeme</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Lateks içermez; lateks hassasiyeti olan kullanıcılar için uygundur</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Tek kullanımlık, iki ele de uyumlu yapı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Renksiz, şeffaf, kokusuz, yumuşak ve elastik form</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>MDR (EU) 2017/745 Class I ve EN455 uyumu</span></li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="kit-item reveal">
+                        <div class="kit-media">
+                            <img src="images/kbrn-ilkyardim/ffp2-maske.png" alt="FFP2 NR D valfli partikül filtre maskesi" loading="lazy" decoding="async">
+                        </div>
+                        <div class="kit-body">
+                            <span class="item-number">Öğe 13</span>
+                            <h3>FFP2 NR D Valfli Partikül Filtre Maskesi</h3>
+                            <p>İnce toz, yağ bazlı ve su bazlı partiküllere karşı solunum koruma amacıyla belirtilen tek kullanımlık valfli maskedir. Meltblown filtre katmanı, özel ekshalasyon valfi ve ayarlanabilir baş bandı ile saha kullanımı hedeflenir.</p>
+                            <ul class="spec-list">
+                                <li><i class="fa-solid fa-check"></i><span>Koruma standardı: EN 149:2001+A1:2009 FFP2 NR D</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>NR: tekrar kullanıma uygun değildir</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Dolomit testinden geçmiş D sınıfı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Hydro-Charging Technology ile meltblown filtre katmanı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Speedlı hava akışı için özel nefes verme valfi</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Burun süngeri, içten burun klipsi, örme ve ayarlanabilir baş bandı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>Kask kullanımına uygun tasarım ve dikey katlanabilir yapı</span></li>
+                                <li><i class="fa-solid fa-check"></i><span>UkrSEPRO TP 019/2011 ve (EU) 2016/425 sertifika bilgisi</span></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="note-panel reveal">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <div>
+                        <strong>Usage notu:</strong> Kimyasal temizleyici, dezenfektan, oftalmik solüsyon ve solunum koruyucu gibi öğeler; ürün etiketi, MSDS, kurum prosedürleri ve yetkili sağlık/iş güvenliği personeli talimatlarına göre kullanılmalıdır.
+                    </div>
+                </div>
+            </section>
+
+            <section class="content-band reveal" id="belge-standart">
+                <div class="kit-section-head">
+                    <span class="section-kicker"><i class="fa-solid fa-certificate"></i> Belge ve Standart Notları</span>
+                    <h2>Uygunluk Bilgileri</h2>
+                    <p>Bazı ürünler için üretim izinleri, kalite belgeleri ve standart referansları verilmiştir. Aşağıdaki özet, belge görselleri ve teknik notlardan derlenmiştir.</p>
+                </div>
+
+                <div class="certificate-grid">
+                    <div class="certificate-card">
+                        <img src="images/kbrn-ilkyardim/saglik-bakanligi-belgesi.png" alt="Sağlık Bakanlığı belge görseli" loading="lazy" decoding="async">
+                        <strong>Sağlık Bakanlığı Production İzni</strong>
+                        <span>Dezenfektan yıkama solüsyonu için üretim izin belgesi bilgisi.</span>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/kbrn-ilkyardim/iso-13485-belgesi.png" alt="ISO 13485 belge görseli" loading="lazy" decoding="async">
+                        <strong>ISO 13485 ve Kalite Belgeleri</strong>
+                        <span>Kalite yönetimi ve üretim uygulamalarına ilişkin sertifika ikonları yer alır.</span>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/kbrn-ilkyardim/tuv-belgesi.png" alt="TÜV Rheinland belge görseli" loading="lazy" decoding="async">
+                        <strong>TÜV / EC Belge Görselleri</strong>
+                        <span>Serum ve fırça öğelerinde uygunluk belgesi görselleri dokümana eklenmiştir.</span>
+                    </div>
+                    <div class="certificate-card">
+                        <img src="images/kbrn-ilkyardim/ffp2-maske.png" alt="FFP2 maske standart görseli" loading="lazy" decoding="async">
+                        <strong>FFP2 NR D Standardı</strong>
+                        <span>Maske için EN 149:2001+A1:2009 FFP2 NR D ve (EU) 2016/425 referansları verilmiştir.</span>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </section>
+
+    <div class="led-bar led-bar-bottom"><div class="led-beam"></div></div>
+
+    <footer class="footer">
+        <div class="footer-grid" style="grid-template-columns:2fr 1fr;">
+            <div class="footer-col">
+                <img src="images/logosirketisimli.png" alt="Almed Medikal" class="footer-logo-img">
+                <p style="color:rgba(255,255,255,.5);font-size:.78rem;margin-bottom:12px;">Almed Cosmetics Pharma and Medical Supplies Construction Machinery Domestic and Foreign Trade Ltd Co</p>
+                <ul class="footer-address">
+                    <li><i class="fa-solid fa-location-dot"></i>Mebusevleri Mah. Turgut Reis Caddesi No:6/4 Çankaya / Ankara, Turkey</li>
+                    <li><i class="fa-solid fa-phone"></i>(0312) 311 50 14</li>
+                    <li><i class="fa-solid fa-fax"></i>(0312) 311 50 13</li>
+                    <li><i class="fa-solid fa-envelope"></i>iletisim@almedmedikal.com.tr</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>QUICK LINKS</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#neden-biz">Corporate</a></li>
+                    <li><a href="urunler.html">Product Catalog</a></li>
+                    <li><a href="index.html#hosgeldiniz">About Us</a></li>
+                    <li><a href="iletisim.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Almed Medikal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+<script src="js/main.js"></script>
+</body>
+</html>
