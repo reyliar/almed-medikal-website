@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temp scripts (i18n injection helpers - not needed for site)
+inject_i18n.py
+fix_i18n.py
+fix_i18n_v2.py
+
+# Workspace config
+*.code-workspace

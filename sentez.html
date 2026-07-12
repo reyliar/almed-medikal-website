@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="İlaç Hammaddeleri Sentez - Almed Medikal; API ve ara ürün sentezi, saflaştırma, proses geliştirme ve ölçek büyütme çalışmaları.">
+    <title>İlaç Hammaddeleri Sentez - Almed Medikal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .detail-hero,
+        .detail-content,
+        .led-bar,
+        .footer { position: relative; z-index: 1; }
+        .detail-hero { background: var(--gradient-hero); padding: 124px 32px 56px; }
+        .detail-hero .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: .9rem; margin-bottom: 26px; transition: gap .2s; }
+        .detail-hero .back-link:hover { gap: 12px; }
+        .hero-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: 44px; align-items: center; }
+        .hero-kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); background: var(--primary-bg); border-radius: var(--radius-full); padding: 6px 14px; font-size: .75rem; font-weight: 800; }
+        .detail-hero h1 { font-family: var(--font-heading); font-size: clamp(2rem, 4.4vw, 3.25rem); line-height: 1.12; margin: 16px 0; color: var(--text-primary); }
+        .detail-hero p { max-width: 700px; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: 24px; }
+        .hero-visual { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; min-height: 360px; display: flex; align-items: center; justify-content: center; padding: 32px; box-shadow: var(--shadow-lg); }
+        .hero-visual img { max-width: 100%; max-height: 330px; object-fit: contain; display: block; }
+        .detail-content { padding: 44px 32px 86px; }
+        .section-kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); background: var(--primary-bg); border-radius: var(--radius-full); padding: 6px 14px; font-size: .75rem; font-weight: 800; }
+        h2 { font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.2; margin: 12px 0 10px; }
+        .intro-text { color: var(--text-secondary); line-height: 1.7; max-width: 780px; }
+        .process-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin-top: 28px; }
+        .process-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 22px; box-shadow: var(--shadow-sm); text-align: center; }
+        .process-card i { font-size: 2rem; color: var(--primary); margin-bottom: 12px; }
+        .process-card h3 { font-family: var(--font-heading); font-size: 1.04rem; margin-bottom: 8px; }
+        .process-card p { color: var(--text-secondary); font-size: .9rem; line-height: 1.65; }
+        .specs-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin: 28px 0; }
+        .spec-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 18px; box-shadow: var(--shadow-sm); }
+        .spec-card i { color: var(--primary); font-size: 1.25rem; margin-bottom: 8px; }
+        .spec-card span { display: block; color: var(--text-muted); font-size: .72rem; font-weight: 800; text-transform: uppercase; }
+        .spec-card strong { display: block; color: var(--text-primary); font-size: 1rem; line-height: 1.35; margin-top: 4px; }
+        .content-band { margin-top: 44px; }
+        .applications { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 22px; }
+        .app-panel { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 22px; box-shadow: var(--shadow-sm); }
+        .app-panel h3 { font-family: var(--font-heading); font-size: 1.04rem; margin-bottom: 10px; }
+        .app-panel ul { list-style: none; padding: 0; }
+        .app-panel li { display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary); font-size: .9rem; line-height: 1.65; margin-bottom: 8px; }
+        .app-panel li i { color: var(--primary); margin-top: 4px; font-size: .75rem; }
+        .note-panel { display: flex; gap: 14px; align-items: flex-start; margin-top: 28px; padding: 18px 20px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; color: #1e40af; line-height: 1.65; }
+        .note-panel i { margin-top: 4px; color: #2563eb; }
+        @media (max-width: 1024px) { .hero-layout, .process-grid, .applications { grid-template-columns: 1fr; } .specs-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 760px) { .detail-hero { padding: 104px 20px 38px; } .detail-content { padding: 32px 20px 64px; } .hero-layout { grid-template-columns: 1fr; } .hero-visual { min-height: 260px; } .specs-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div id="preloader"><img src="favicon.png" alt="Almed Medikal" class="preloader-logo"><div class="preloader-bar"></div></div>
+
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span><i class="fa-solid fa-phone"></i> (0312) 311 50 14</span>
+            <span><i class="fa-solid fa-envelope"></i> iletisim@almedmedikal.com.tr</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="images/logosirketisimli.png" alt="Almed Medikal"></a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
+                <li><a href="index.html#neden-biz" data-i18n="nav.corporate">Kurumsal</a></li>
+                <li><a href="urunler.html" class="btn-nav" data-i18n="nav.products">Ürünler</a></li>
+                <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menü" data-i18n-title="menu.aria"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="led-bar led-bar-top"><div class="led-beam"></div></div>
+
+    <section class="detail-hero">
+        <div class="container">
+            <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön</a>
+            <div class="hero-layout">
+                <div>
+                    <span class="hero-kicker"><i class="fa-solid fa-flask"></i> İlaç • Hammaddeler</span>
+                    <h1>İlaç Hammaddeleri Sentez</h1>
+                    <p>İlaç hammaddeleri ve özel amaçlı kimyasal bileşiklerin laboratuvar ölçeğinde sentez, proses geliştirme, doğrulama ve ölçek büyütme çalışmalarını kapsayan Ar-Ge alanı. Yüksek saflıkta ve uluslararası standartlara uygun farmasötik bileşiklerin sentezi gerçekleştirilmektedir.</p>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/sentez.png" alt="İlaç Hammaddeleri Sentez">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="container">
+            <div class="specs-grid reveal">
+                <div class="spec-card">
+                    <i class="fa-solid fa-microscope"></i>
+                    <span>Çalışma Alanı</span>
+                    <strong>API ve Ara Ürün Sentezi</strong>
+                </div>
+                <div class="spec-card">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Proses Tipi</span>
+                    <strong>Laboratuvar & Pilot Ölçek</strong>
+                </div>
+                <div class="spec-card">
+                    <i class="fa-solid fa-certificate"></i>
+                    <span>Kalite Standardı</span>
+                    <strong>GMP Uyumlu Süreçler</strong>
+                </div>
+                <div class="spec-card">
+                    <i class="fa-solid fa-vial-circle-check"></i>
+                    <span>Analitik Destek</span>
+                    <strong>HPLC, GC, NMR, FTIR</strong>
+                </div>
+            </div>
+
+            <div class="content-band reveal">
+                <span class="section-kicker"><i class="fa-solid fa-gears"></i> Sentez Süreci</span>
+                <h2>Sentez ve Proses Geliştirme Aşamaları</h2>
+                <p class="intro-text">Aktif farmasötik içeriklerin (API) sentezi, saflaştırılması ve analizi; GMP standartlarında üretim prosesleri geliştirme ve ölçek büyütme çalışmalarıyla desteklenmektedir.</p>
+
+                <div class="process-grid">
+                    <div class="process-card">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <h3>Reaksiyon Geliştirme</h3>
+                        <p>Hedef molekül için optimum reaksiyon koşullarının belirlenmesi, verim ve seçicilik optimizasyonu.</p>
+                    </div>
+                    <div class="process-card">
+                        <i class="fa-solid fa-filter-circle-dollar"></i>
+                        <h3>Saflaştırma</h3>
+                        <p>Kristalizasyon, distilasyon, kolon kromatografisi gibi yöntemlerle yüksek saflıkta ürün eldesi.</p>
+                    </div>
+                    <div class="process-card">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <h3>Analiz & Doğrulama</h3>
+                        <p>HPLC, GC, NMR, FTIR ve kütle spektrometresi ile yapısal karakterizasyon ve saflık tayini.</p>
+                    </div>
+                    <div class="process-card">
+                        <i class="fa-solid fa-arrow-up-right-dots"></i>
+                        <h3>Ölçek Büyütme</h3>
+                        <p>Laboratuvar ölçeğinden pilot üretime geçiş, proses validasyonu ve tekrarlanabilirlik çalışmaları.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-band reveal">
+                <span class="section-kicker"><i class="fa-solid fa-bullseye"></i> Uygulama Alanları</span>
+                <h2>Hangi Alanlarda Sentez Çalışmaları Yürütülüyor?</h2>
+                <div class="applications">
+                    <div class="app-panel">
+                        <h3><i class="fa-solid fa-capsules"></i> Farmasötik API'ler</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i><span>Hemostatik etken maddeler ve kan durdurucu formülasyonlar</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Antiseptik ve dezenfektan aktif bileşenler</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Dil altı ilaç formülasyonları için API sentezi</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Radyasyon koruyucu kimyasal bileşikler</span></li>
+                        </ul>
+                    </div>
+                    <div class="app-panel">
+                        <h3><i class="fa-solid fa-industry"></i> Endüstriyel Uygulamalar</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i><span>Kontrollü ortamda reaksiyon optimizasyonu</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Proses geliştirme ve iyileştirme çalışmaları</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Analitik yöntem geliştirme ve validasyon</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Stabilite ve raf ömrü değerlendirmeleri</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-panel reveal">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <strong>Bilgi:</strong> Sentez çalışmaları, uluslararası farmakope standartları (USP, EP) referans alınarak yürütülmektedir. Tüm prosesler GMP prensipleri doğrultusunda dokümante edilmekte ve kalite kontrol süreçleriyle desteklenmektedir.
+                </div>
+            </div>
+
+            <div class="content-band reveal" style="margin-top:32px;">
+                <span class="section-kicker"><i class="fa-solid fa-link"></i> İlgili Ürünler</span>
+                <h2>Sentez Çalışmalarımızdan Örnekler</h2>
+                <div class="info-grid">
+                    <div class="info-panel" style="cursor:pointer;" onclick="location.href='hemostatik.html'">
+                        <h3><i class="fa-solid fa-kit-medical"></i> Hemostatik Antiseptik Gaz Kompresi</h3>
+                        <p style="color:var(--text-secondary);font-size:.9rem;line-height:1.65;">Kanama kontrolüne yardımcı hemostatik etki ile yara yüzeyinde hijyen desteğini birleştiren steril gaz kompres sistemi.</p>
+                        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--primary);font-weight:700;font-size:.85rem;margin-top:8px;">Detaylı Bilgi <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                    <div class="info-panel" style="cursor:pointer;" onclick="location.href='kan-durdurucu.html'">
+                        <h3><i class="fa-solid fa-droplet"></i> Kan Durdurucu İlaçlar</h3>
+                        <p style="color:var(--text-secondary);font-size:.9rem;line-height:1.65;">Hızlı pıhtılaşma ve kanama kontrolü hedefiyle geliştirilen hemostatik formülasyonlar; toz, granül, emdirilmiş gazlı bez ve sprey formlarında.</p>
+                        <span style="display:inline-flex;align-items:center;gap:6px;color:var(--primary);font-weight:700;font-size:.85rem;margin-top:8px;">Detaylı Bilgi <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="led-bar led-bar-bottom"><div class="led-beam"></div></div>
+
+    <footer class="footer">
+        <div class="footer-grid" style="grid-template-columns:2fr 1fr;">
+            <div class="footer-col">
+                <img src="images/logosirketisimli.png" alt="Almed Medikal" class="footer-logo-img">
+                <p style="color:rgba(255,255,255,.5);font-size:.78rem;margin-bottom:12px;" data-i18n="footer.company">Almed Kozmetik İlaç ve Tıbbi Malzeme İnşaat Makina İç ve Dış Ticaret Ltd. Şti.</p>
+                <ul class="footer-address">
+                    <li><i class="fa-solid fa-location-dot"></i>Mebusevleri Mah. Turgut Reis Caddesi No:6/4 Çankaya / Ankara</li>
+                    <li><i class="fa-solid fa-phone"></i>(0312) 311 50 14</li>
+                    <li><i class="fa-solid fa-fax"></i>(0312) 311 50 13</li>
+                    <li><i class="fa-solid fa-envelope"></i>iletisim@almedmedikal.com.tr</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.quick">HIZLI ERİŞİM</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-i18n="footer.home">Anasayfa</a></li>
+                    <li><a href="index.html#neden-biz" data-i18n="nav.corporate">Kurumsal</a></li>
+                    <li><a href="urunler.html" data-i18n="footer.catalog">Ürün Kataloğu</a></li>
+                    <li><a href="index.html#hosgeldiniz" data-i18n="footer.about">Hakkımızda</a></li>
+                    <li><a href="iletisim.html" data-i18n="footer.contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Almed Medikal. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

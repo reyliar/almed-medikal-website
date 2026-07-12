@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Almed Medikal Haberler - Yeni Web Sitemiz Yayında">
+    <title>Haber - Almed Medikal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .news-detail { padding:120px 32px 80px; max-width:800px; margin:0 auto; }
+        .news-detail .back-link { display:inline-flex;align-items:center;gap:8px;color:var(--primary);text-decoration:none;font-weight:600;font-size:.9rem;margin-bottom:24px;transition:gap .2s; }
+        .news-detail .back-link:hover { gap:12px; }
+        .news-detail-header { margin-bottom:32px; }
+        .news-detail-header .date-tag { display:inline-block; background:var(--primary-bg); color:var(--primary); padding:6px 14px; border-radius:var(--radius-full); font-size:.8rem; font-weight:700; margin-bottom:12px; }
+        .news-detail-header h1 { font-family:var(--font-heading); font-size:2rem; font-weight:800; letter-spacing:-.02em; margin-bottom:8px; }
+        .news-detail-header .meta { color:var(--text-muted); font-size:.85rem; }
+        .news-detail-img { border-radius:var(--radius-lg); overflow:hidden; margin-bottom:32px; box-shadow:var(--shadow-md); }
+        .news-detail-img img { width:100%; display:block; }
+        .news-detail-body { font-size:1.05rem; line-height:1.8; color:var(--text-secondary); }
+        .news-detail-body p { margin-bottom:16px; }
+    </style>
+</head>
+<body>
+    <div id="preloader"><img src="favicon.png" alt="Almed Medikal" class="preloader-logo"><div class="preloader-bar"></div></div>
+
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span><i class="fa-solid fa-phone"></i> (0312) 311 50 14</span>
+            <span><i class="fa-solid fa-envelope"></i> iletisim@almedmedikal.com.tr</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="images/logosirketisimli.png" alt="Almed Medikal"></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" data-i18n="nav.home">Anasayfa</a></li>
+                <li><a href="urunler.html" class="btn-nav" data-i18n="nav.products">Ürünler</a></li>
+                <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menü" data-i18n-title="menu.aria"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="led-bar led-bar-top"><div class="led-beam"></div></div>
+
+    <section class="news-detail">
+        <a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Anasayfaya Dön</a>
+        <div class="news-detail-header">
+            <span class="date-tag"><i class="fa-solid fa-bullhorn"></i> Duyuru</span>
+            <h1 data-i18n="news.title">Yeni Web Sitemiz Yayında!</h1>
+            <div class="meta"><i class="fa-regular fa-calendar"></i> 11 Temmuz 2026 &nbsp;·&nbsp; <i class="fa-regular fa-clock"></i> 10:00</div>
+        </div>
+        <div class="news-detail-img">
+            <img src="images/blog-big-2.jpg" alt="Almed Medikal Yeni Web Sitesi">
+        </div>
+        <div class="news-detail-body">
+            <p>Almed Medikal olarak, yenilenen web sitemizle artık dijital dünyada da güçlü bir şekilde varız. Tüm ürün kataloğumuzu, teknik detayları ve güncel gelişmeleri bu platform üzerinden takip edebilirsiniz.</p>
+            <p>Yeni web sitemizde; KBRN savunma ekipmanlarımızdan ilaç hammaddelerine, ilk yardım ürünlerinden Ar-Ge projelerimize kadar tüm ürün ve hizmetlerimizi detaylı bir şekilde inceleyebilirsiniz.</p>
+            <p>Daha hızlı, daha kapsamlı ve daha modern bir deneyim sunmaktan mutluluk duyuyoruz. Bizi takip etmeye devam edin!</p>
+        </div>
+    </section>
+    <div class="led-bar led-bar-bottom"><div class="led-beam"></div></div>
+
+
+
+    <footer class="footer">
+        <div class="footer-grid" style="grid-template-columns:2fr 1fr;">
+            <div class="footer-col">
+                <img src="images/logosirketisimli.png" alt="Almed Medikal" class="footer-logo-img">
+                <p style="color:rgba(255,255,255,.5);font-size:.78rem;margin-bottom:12px;" data-i18n="footer.company">Almed Kozmetik İlaç ve Tıbbi Malzeme İnşaat Makina İç ve Dış Ticaret Ltd Şti</p>
+                <ul class="footer-address">
+                    <li><i class="fa-solid fa-location-dot"></i>Mebusevleri Mah. Turgut Reis Caddesi No:6/4 Çankaya / Ankara</li>
+                    <li><i class="fa-solid fa-phone"></i>(0312) 311 50 14</li>
+                    <li><i class="fa-solid fa-fax"></i>(0312) 311 50 13</li>
+                    <li><i class="fa-solid fa-envelope"></i>iletisim@almedmedikal.com.tr</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.quick">HIZLI ERİŞİM</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
+                <li><a href="index.html#neden-biz" data-i18n="nav.corporate">Kurumsal</a></li>
+                    <li><a href="urunler.html" data-i18n="footer.catalog">Ürün Kataloğu</a></li>
+                    <li><a href="index.html#hosgeldiniz" data-i18n="footer.about">Hakkımızda</a></li>
+                    <li><a href="iletisim.html" data-i18n="footer.contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Almed Medikal. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

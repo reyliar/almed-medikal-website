@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ilac Hammaddeleri Uretim Surecleri">
+    <title>Ilac Hammaddeleri Uretim - Almed Medikal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .detail-hero { background:var(--gradient-hero); padding:120px 32px 48px; }
+        .detail-hero .back-link { display:inline-flex;align-items:center;gap:8px;color:var(--primary);text-decoration:none;font-weight:600;font-size:.9rem;margin-bottom:24px;transition:gap .2s; }
+        .detail-hero .back-link:hover { gap:12px; }
+        .detail-content { padding:48px 32px 80px; }
+        .detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start; }
+        .detail-img { background:var(--white); border:1px solid var(--border-light); border-radius:var(--radius-xl); padding:32px; display:flex; align-items:center; justify-content:center; min-height:360px; box-shadow:var(--shadow-md); }
+        .detail-img img { max-width:100%; max-height:400px; object-fit:contain; }
+        .detail-img .detail-icon { font-size:8rem; }
+        .detail-info h1 { font-family:var(--font-heading); font-size:1.8rem; font-weight:700; margin-bottom:8px; letter-spacing:-.02em; }
+        .detail-info .detail-tag { display:inline-block; padding:5px 14px; background:var(--primary-bg); color:var(--primary); border-radius:var(--radius-full); font-size:.75rem; font-weight:700; margin-bottom:16px; }
+        .detail-info .detail-intro { font-size:1.05rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px; }
+        .specs-table { display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr)); gap:8px; margin-bottom:24px; }
+        .specs-table .spec-item { background:var(--bg-secondary); border:1px solid var(--border-light); border-radius:var(--radius-sm); padding:12px 16px; }
+        .specs-table .spec-item .spec-label { font-size:.7rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:.05em; font-weight:600; }
+        .specs-table .spec-item .spec-value { font-size:.92rem; color:var(--text-primary); font-weight:600; margin-top:2px; }
+        .detail-body h2 { font-family:var(--font-heading); font-size:1.25rem; font-weight:700; margin:28px 0 12px; }
+        .detail-body p, .detail-body li { color:var(--text-secondary); line-height:1.8; margin-bottom:12px; }
+        .detail-body ul, .detail-body ol { padding-left:20px; }
+        .detail-body ul li, .detail-body ol li { margin-bottom:8px; }
+        .highlight-box { background:var(--primary-bg); border-left:3px solid var(--primary); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:16px 20px; margin:20px 0; }
+        @media (max-width:768px) { .detail-grid { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <div id="preloader"><img src="favicon.png" alt="Almed Medikal" class="preloader-logo"><div class="preloader-bar"></div></div>
+
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span><i class="fa-solid fa-phone"></i> (0312) 311 50 14</span>
+            <span><i class="fa-solid fa-envelope"></i> iletisim@almedmedikal.com.tr</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="images/logosirketisimli.png" alt="Almed Medikal"></a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
+                <li><a href="index.html#neden-biz" data-i18n="nav.corporate">Kurumsal</a></li>
+                <li><a href="urunler.html" class="btn-nav" data-i18n="nav.products">Ürünler</a></li>
+                <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menü" data-i18n-title="menu.aria"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="led-bar led-bar-top"><div class="led-beam"></div></div>
+
+    <section class="detail-hero"><div class="container"><a href="index.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön</a></div></section><section class="detail-content">
+    <div class="container">
+        <div class="detail-grid">
+            <div class="detail-img"><img src="images/3--1469301-Three-Assistants-in-Medical-Research-Laboratory.jpg" alt="Üretim"></div>
+            <div class="detail-info">
+                <span class="detail-tag" data-i18n="uretim.tag">İlaç • Üretim</span>
+                <h1>Üretim</h1>
+                <p class="detail-intro" data-i18n="uretim.intro">En son teknolojik sistemlerle donatılmış laboratuvarlarımızda, yüksek kalite standartlarında ilaç hammaddeleri üretimi gerçekleştirilmektedir.</p>
+                <div class="specs-table"></div>
+                <div class="detail-body"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== ÜRETİM ÜRÜNLERİ ===== -->
+<section style="padding:0 32px 80px;">
+    <div class="container" style="max-width:1200px;">
+        <div style="text-align:center;margin-bottom:36px;">
+            <span style="font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--primary);font-weight:700;">Üretim Ekipmanları</span>
+            <h2 style="font-family:var(--font-heading);font-size:1.6rem;font-weight:700;margin:8px 0;">Üretim <span class="highlight">Ürünlerimiz</span></h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px;">
+            <div style="background:var(--white);border:1px solid var(--border-light);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04);transition:all .3s;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 12px rgba(0,0,0,.04)';" onclick="location.href='erweka.html'">
+                <div style="height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f0f7ff,#e8f0fa);padding:20px;">
+                    <img src="images/erweka-ar403.png" alt="ERWEKA AR 403" style="max-width:100%;max-height:100%;object-fit:contain;">
+                </div>
+                <div style="padding:20px;">
+                    <span style="font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);font-weight:700;background:rgba(0,102,204,.08);padding:4px 10px;border-radius:20px;">İlaç & Üretim</span>
+                    <h3 style="font-size:1.05rem;font-weight:700;margin:8px 0;">ERWEKA AR 403 – Farmasötik Test Cihazı</h3>
+                    <p style="font-size:.84rem;color:var(--text-secondary);line-height:1.5;margin-bottom:14px;">Modüler farmasötik test cihazı • Dissolution, disintegration ve friability tester • 4 istasyonlu çalışma • USP/EP uyumlu • R&D ve kalite kontrol laboratuvarları için ideal</p>
+                    <a href="erweka.html" style="color:var(--primary);font-weight:600;font-size:.85rem;text-decoration:none;">Detaylı Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div style="background:var(--white);border:1px solid var(--border-light);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04);transition:all .3s;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 12px rgba(0,0,0,.04)';" onclick="location.href='medmak.html'">
+                <div style="height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f0f7ff,#e8f0fa);padding:20px;">
+                    <img src="images/medmak-makine.png" alt="MEDMAK" style="max-width:100%;max-height:100%;object-fit:contain;">
+                </div>
+                <div style="padding:20px;">
+                    <span style="font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);font-weight:700;background:rgba(0,102,204,.08);padding:4px 10px;border-radius:20px;">İlaç & Üretim</span>
+                    <h3 style="font-size:1.05rem;font-weight:700;margin:8px 0;">MEDMAK – Swab Katlama ve Paketleme</h3>
+                    <p style="font-size:.84rem;color:var(--text-secondary);line-height:1.5;margin-bottom:14px;">LXZ-50/75/100 serisi • Vakum destekli swab katlama • 1-5 swab/paket kapasitesi • PLC kontrollü otomatik sistem • ISO 13485 uyumlu üretim</p>
+                    <a href="medmak.html" style="color:var(--primary);font-weight:600;font-size:.85rem;text-decoration:none;">Detaylı Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div style="background:var(--white);border:1px solid var(--border-light);border-radius:16px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04);transition:all .3s;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,.1)';" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 2px 12px rgba(0,0,0,.04)';" onclick="location.href='hemostatik.html'">
+                <div style="height:220px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#f0f7ff,#e8f0fa);padding:20px;">
+                    <img src="images/medical.jpg" alt="Hemostatik Gaz Kompresi" style="max-width:100%;max-height:100%;object-fit:contain;">
+                </div>
+                <div style="padding:20px;">
+                    <span style="font-size:.7rem;text-transform:uppercase;letter-spacing:.05em;color:var(--primary);font-weight:700;background:rgba(0,102,204,.08);padding:4px 10px;border-radius:20px;">İlaç & Üretim</span>
+                    <h3 style="font-size:1.05rem;font-weight:700;margin:8px 0;">Hemostatik Antiseptik Gaz Kompresi</h3>
+                    <p style="font-size:.84rem;color:var(--text-secondary);line-height:1.5;margin-bottom:14px;">Hemostatik ve antiseptik özellikli • Medikal gaz kompres sistemi • Hızlı kanama kontrolü • Steril paketli • Acil müdahale ve cerrahi kullanım için</p>
+                    <a href="hemostatik.html" style="color:var(--primary);font-weight:600;font-size:.85rem;text-decoration:none;">Detaylı Bilgi <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <div class="led-bar led-bar-bottom"><div class="led-beam"></div></div>
+
+
+
+    <footer class="footer">
+        <div class="footer-grid" style="grid-template-columns:2fr 1fr;">
+            <div class="footer-col">
+                <img src="images/logosirketisimli.png" alt="Almed Medikal" class="footer-logo-img">
+                <p style="color:rgba(255,255,255,.5);font-size:.78rem;margin-bottom:12px;">Almed Kozmetik Ilac ve Tibbi Malzeme Insaat Makina Ic ve Dis Ticaret Ltd Sti</p>
+                <ul class="footer-address">
+                    <li><i class="fa-solid fa-location-dot"></i>Mebusevleri Mah. Turgut Reis Caddesi No:6/4 Cankaya / Ankara</li>
+                    <li><i class="fa-solid fa-phone"></i>(0312) 311 50 14</li>
+                    <li><i class="fa-solid fa-fax"></i>(0312) 311 50 13</li>
+                    <li><i class="fa-solid fa-envelope"></i>iletisim@almedmedikal.com.tr</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>HIZLI ERISIM</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-i18n="footer.home">Anasayfa</a></li>
+                <li><a href="index.html#neden-biz" data-i18n="nav.corporate">Kurumsal</a></li>
+                    <li><a href="urunler.html">Urun Katalogu</a></li>
+                    <li><a href="index.html#hosgeldiniz">Hakkimizda</a></li>
+                    <li><a href="iletisim.html">Iletisim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Almed Medikal. Tum haklari saklidir.</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

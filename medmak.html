@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MEDMAK Swab Katlama ve Paketleme Makinesi - LXZ-50/75/100 serisi; vakum destekli, PLC kontrollü otomatik swab transfer ve paketleme sistemi.">
+    <title>MEDMAK Swab Katlama ve Paketleme - Almed Medikal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        .detail-hero,
+        .detail-content,
+        .led-bar,
+        .footer { position: relative; z-index: 1; }
+        .detail-hero { background: var(--gradient-hero); padding: 124px 32px 56px; }
+        .detail-hero .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: .9rem; margin-bottom: 26px; transition: gap .2s; }
+        .detail-hero .back-link:hover { gap: 12px; }
+        .hero-layout { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(320px, .95fr); gap: 44px; align-items: center; }
+        .hero-kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); background: var(--primary-bg); border-radius: var(--radius-full); padding: 6px 14px; font-size: .75rem; font-weight: 800; }
+        .detail-hero h1 { font-family: var(--font-heading); font-size: clamp(2rem, 4.4vw, 3rem); line-height: 1.12; margin: 16px 0; color: var(--text-primary); }
+        .detail-hero p { max-width: 700px; color: var(--text-secondary); font-size: 1.05rem; line-height: 1.75; margin-bottom: 24px; }
+        .hero-visual { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; min-height: 360px; display: flex; align-items: center; justify-content: center; padding: 32px; box-shadow: var(--shadow-lg); }
+        .hero-visual img { max-width: 100%; max-height: 330px; object-fit: contain; display: block; }
+        .detail-content { padding: 44px 32px 86px; }
+        .section-kicker { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); background: var(--primary-bg); border-radius: var(--radius-full); padding: 6px 14px; font-size: .75rem; font-weight: 800; }
+        h2 { font-family: var(--font-heading); font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.2; margin: 12px 0 10px; }
+        .intro-text { color: var(--text-secondary); line-height: 1.7; max-width: 780px; }
+        .quick-specs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-bottom: 34px; }
+        .quick-spec { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 18px; box-shadow: var(--shadow-sm); }
+        .quick-spec i { color: var(--primary); font-size: 1.25rem; margin-bottom: 8px; }
+        .quick-spec span { display: block; color: var(--text-muted); font-size: .72rem; font-weight: 800; text-transform: uppercase; }
+        .quick-spec strong { display: block; color: var(--text-primary); font-size: 1rem; line-height: 1.35; margin-top: 4px; }
+        .content-band { margin-top: 40px; }
+        .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 22px; }
+        .info-panel { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 22px; box-shadow: var(--shadow-sm); }
+        .info-panel h3 { font-family: var(--font-heading); font-size: 1.04rem; margin-bottom: 10px; }
+        .info-panel ul { list-style: none; padding: 0; }
+        .info-panel li { display: flex; align-items: flex-start; gap: 8px; color: var(--text-secondary); font-size: .9rem; line-height: 1.65; margin-bottom: 8px; }
+        .info-panel li i { color: var(--primary); margin-top: 4px; font-size: .75rem; }
+        .spec-table { width: 100%; border-collapse: collapse; margin-top: 22px; background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; overflow: hidden; }
+        .spec-table th, .spec-table td { padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border-light); font-size: .9rem; }
+        .spec-table th { background: var(--bg-secondary); font-weight: 700; color: var(--text-primary); font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; }
+        .spec-table td { color: var(--text-secondary); }
+        .spec-table tr:last-child td { border-bottom: none; }
+        .models-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+        .model-card { background: var(--white); border: 1px solid var(--border-light); border-radius: 8px; padding: 20px; box-shadow: var(--shadow-sm); text-align: center; }
+        .model-card h3 { font-family: var(--font-heading); font-size: 1.2rem; color: var(--primary); margin-bottom: 10px; }
+        .model-card p { color: var(--text-secondary); font-size: .85rem; line-height: 1.6; }
+        .note-panel { display: flex; gap: 14px; align-items: flex-start; margin-top: 28px; padding: 18px 20px; background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; color: #1e40af; line-height: 1.65; }
+        .note-panel i { margin-top: 4px; color: #2563eb; }
+        @media (max-width: 1024px) { .hero-layout { grid-template-columns: 1fr; } .quick-specs, .models-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 760px) { .detail-hero { padding: 104px 20px 38px; } .detail-content { padding: 32px 20px 64px; } .hero-layout, .info-grid { grid-template-columns: 1fr; } .hero-visual { min-height: 260px; } .quick-specs, .models-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <div id="preloader"><img src="favicon.png" alt="Almed Medikal" class="preloader-logo"><div class="preloader-bar"></div></div>
+
+    <div class="top-bar">
+        <div class="top-bar-inner">
+            <span><i class="fa-solid fa-phone"></i> (0312) 311 50 14</span>
+            <span><i class="fa-solid fa-envelope"></i> iletisim@almedmedikal.com.tr</span>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo"><img src="images/logosirketisimli.png" alt="Almed Medikal"></a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-i18n="nav.home">Anasayfa</a></li>
+                <li><a href="index.html#neden-biz" data-i18n="nav.corporate">Kurumsal</a></li>
+                <li><a href="urunler.html" class="btn-nav" data-i18n="nav.products">Ürünler</a></li>
+                <li><a href="iletisim.html" data-i18n="nav.contact">İletişim</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Menü" data-i18n-title="menu.aria"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <div class="led-bar led-bar-top"><div class="led-beam"></div></div>
+
+    <section class="detail-hero">
+        <div class="container">
+            <a href="uretim.html" class="back-link"><i class="fa-solid fa-arrow-left"></i> Üretim Sayfasına Dön</a>
+            <div class="hero-layout">
+                <div>
+                    <span class="hero-kicker"><i class="fa-solid fa-industry"></i> İlaç • Üretim • Makine</span>
+                    <h1>MEDMAK Swab Katlama ve Paketleme</h1>
+                    <p>MEDMAK LXZ-50 / LXZ-75 / LXZ-100 single swab transfer unit; swab katlama makinesinden çıkan tekli swabların uyarlanmış paketleme makinesine kontrollü beslenmesini sağlayan yardımcı ünitedir. PLC kontrollü, vakum destekli ve tam otomatik çalışma prensibine sahiptir.</p>
+                </div>
+                <div class="hero-visual">
+                    <img src="images/medmak-makine.png" alt="MEDMAK Swab Katlama ve Paketleme Makinesi">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-content">
+        <div class="container">
+            <div class="quick-specs reveal">
+                <div class="quick-spec">
+                    <i class="fa-solid fa-cube"></i>
+                    <span>Model Serisi</span>
+                    <strong>LXZ-50 / 75 / 100</strong>
+                </div>
+                <div class="quick-spec">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Kapasite</span>
+                    <strong>1 – 5 swab/paket</strong>
+                </div>
+                <div class="quick-spec">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>Transfer</span>
+                    <strong>Vakum Destekli</strong>
+                </div>
+                <div class="quick-spec">
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>Kontrol</span>
+                    <strong>PLC Otomatik Sistem</strong>
+                </div>
+            </div>
+
+            <div class="content-band reveal">
+                <span class="section-kicker"><i class="fa-solid fa-microscope"></i> Teknik Özellikler</span>
+                <h2>MEDMAK Teknik Detayları</h2>
+                <p class="intro-text">Swab katlama makinesi ile paketleme makinesi arasında köprü görevi gören transfer ünitesi; tekli swabları vakum destekli sistemle alır, seçilebilir adetlerde gruplandırır ve paketleme makinesine kontrollü olarak besler.</p>
+
+                <table class="spec-table">
+                    <tr><th>Özellik</th><th>Değer</th></tr>
+                    <tr><td>Model Ailesi</td><td>LXZ-50 / LXZ-75 / LXZ-100</td></tr>
+                    <tr><td>Fonksiyon</td><td>Single Swab Transfer Unit</td></tr>
+                    <tr><td>Swab Kapasitesi</td><td>1 – 5 swab/paket (seçilebilir)</td></tr>
+                    <tr><td>Transfer Yöntemi</td><td>Vakum destekli kontrollü besleme</td></tr>
+                    <tr><td>Kontrol Sistemi</td><td>PLC kontrollü tam otomatik</td></tr>
+                    <tr><td>Entegrasyon</td><td>Swab katlama → Transfer → Paketleme hattı</td></tr>
+                    <tr><td>Uyumluluk</td><td>ISO 13485 üretim standartları</td></tr>
+                    <tr><td>Kullanım Alanı</td><td>Medikal swab üretim hatları</td></tr>
+                </table>
+            </div>
+
+            <div class="content-band reveal">
+                <span class="section-kicker"><i class="fa-solid fa-cubes"></i> Model Serisi</span>
+                <h2>LXZ Serisi Modeller</h2>
+                <div class="models-grid">
+                    <div class="model-card">
+                        <h3>LXZ-50</h3>
+                        <p>Standart kapasiteli giriş seviyesi model. Düşük-orta hacimli üretim hatları için optimize edilmiştir. Kompakt tasarım ve kolay entegrasyon.</p>
+                    </div>
+                    <div class="model-card">
+                        <h3>LXZ-75</h3>
+                        <p>Orta kapasiteli endüstriyel model. Dengeli hız ve kapasite sunar. Çoğu standart üretim hattı için ideal çözümdür.</p>
+                    </div>
+                    <div class="model-card">
+                        <h3>LXZ-100</h3>
+                        <p>Yüksek kapasiteli amiral gemisi model. Maksimum üretim hızı ve verimlilik için tasarlanmıştır. Büyük ölçekli üretim tesisleri için uygundur.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-band reveal">
+                <span class="section-kicker"><i class="fa-solid fa-list-check"></i> Öne Çıkan Özellikler</span>
+                <h2>Neden MEDMAK?</h2>
+                <div class="info-grid">
+                    <div class="info-panel">
+                        <h3><i class="fa-solid fa-robot"></i> Otomasyon</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i><span>PLC kontrollü tam otomatik çalışma</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Dokunmatik ekran ile kolay operatör kontrolü</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Seçilebilir swab adedi (1-5 arası programlanabilir)</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Hata tespit ve otomatik durdurma sistemi</span></li>
+                        </ul>
+                    </div>
+                    <div class="info-panel">
+                        <h3><i class="fa-solid fa-certificate"></i> Kalite & Uyumluluk</h3>
+                        <ul>
+                            <li><i class="fa-solid fa-check"></i><span>ISO 13485 medikal cihaz üretim standartlarına uygun</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Vakum destekli hassas transfer, ürüne zarar vermez</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Mevcut swab katlama ve paketleme hatlarına entegre edilebilir</span></li>
+                            <li><i class="fa-solid fa-check"></i><span>Dayanıklı endüstriyel yapı, uzun ömürlü kullanım</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="note-panel reveal">
+                <i class="fa-solid fa-circle-info"></i>
+                <div>
+                    <strong>Not:</strong> MEDMAK transfer ünitesi, swab üretim hattının verimliliğini artırmak ve manuel işlemleri minimize etmek amacıyla geliştirilmiştir. Detaylı katalog, fiyat ve teknik dokümantasyon için iletişime geçiniz.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="led-bar led-bar-bottom"><div class="led-beam"></div></div>
+
+    <footer class="footer">
+        <div class="footer-grid" style="grid-template-columns:2fr 1fr;">
+            <div class="footer-col">
+                <img src="images/logosirketisimli.png" alt="Almed Medikal" class="footer-logo-img">
+                <p style="color:rgba(255,255,255,.5);font-size:.78rem;margin-bottom:12px;" data-i18n="footer.company">Almed Kozmetik İlaç ve Tıbbi Malzeme İnşaat Makina İç ve Dış Ticaret Ltd. Şti.</p>
+                <ul class="footer-address">
+                    <li><i class="fa-solid fa-location-dot"></i>Mebusevleri Mah. Turgut Reis Caddesi No:6/4 Çankaya / Ankara</li>
+                    <li><i class="fa-solid fa-phone"></i>(0312) 311 50 14</li>
+                    <li><i class="fa-solid fa-fax"></i>(0312) 311 50 13</li>
+                    <li><i class="fa-solid fa-envelope"></i>iletisim@almedmedikal.com.tr</li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 data-i18n="footer.quick">HIZLI ERİŞİM</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html" data-i18n="footer.home">Anasayfa</a></li>
+                    <li><a href="index.html#neden-biz" data-i18n="nav.corporate">Kurumsal</a></li>
+                    <li><a href="urunler.html" data-i18n="footer.catalog">Ürün Kataloğu</a></li>
+                    <li><a href="index.html#hosgeldiniz" data-i18n="footer.about">Hakkımızda</a></li>
+                    <li><a href="iletisim.html" data-i18n="footer.contact">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copyright">&copy; 2026 Almed Medikal. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
