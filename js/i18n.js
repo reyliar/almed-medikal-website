@@ -509,7 +509,8 @@ const I18N = (function() {
 
     /** Initialize the i18n system */
     function init() {
-        const lang = getLang();
+        // Always default to Turkish on root pages. EN pages are in /en/ folder.
+        const lang = 'tr';
         injectSwitcher();
         applyLang(lang);
     }
