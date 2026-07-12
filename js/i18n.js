@@ -357,6 +357,37 @@ const I18N = (function() {
     dict['tr.e0ef2f07c2'] = { tr: 'Kanama, hava yolu, yanık, immobilizasyon', en: 'Bleeding, airway, burns, immobilization' };
     dict['tr.fc7326efe3'] = { tr: '-30°C ile +90°C arası', en: '-30°C to +90°C' };
 
+
+    dict['tr.ea407c9598'] = { tr: 'İlk Yardım • Travma', en: 'First Aid • Trauma' };
+    dict['tr.886083e09d'] = { tr: 'Kapsam', en: 'Scope' };
+    dict['tr.75d72df9f5'] = { tr: 'MOLLE sistem çanta', en: 'MOLLE system pouch' };
+    dict['tr.120a9b0468'] = { tr: 'Turnike, hemostatik pansuman ve acil bandaj ile kanama kontrolünü destekler.', en: 'Supports bleeding control with tourniquet, hemostatic dressing, and emergency bandage.' };
+    dict['tr.bd35243c76'] = { tr: 'NPA, makas, marker, medikal bant ve elastik bandaj ile travma müdahalesini tamamlar.', en: 'Completes trauma intervention with NPA, scissors, marker, medical tape, and elastic bandage.' };
+    dict['tr.59bda97be3'] = { tr: 'Burn gel, burn dressing ve acil battaniye yanık/hipotermi risklerinde kullanılır.', en: 'Burn gel, burn dressing, and emergency blanket used for burn/hypothermia risks.' };
+    dict['tr.e35d3d5cd8'] = { tr: 'Kullanım Alanları', en: 'Areas of Use' };
+    dict['tr.9f3639d346'] = { tr: 'Güvenlik ve kurtarma ekipleri', en: 'Safety and rescue teams' };
+    dict['tr.65cb656c63'] = { tr: 'Araç ve kişisel travma kiti', en: 'Vehicle and personal trauma kit' };
+    dict['tr.650c4be5aa'] = { tr: 'KBRN Dekontaminasyon ve İlk Yardım', en: 'CBRN Decontamination & First Aid' };
+    dict['tr.d1fcfbaca8'] = { tr: 'KBRN İlk Yardım Çantası İçeriği', en: 'CBRN First Aid Kit Contents' };
+    dict['tr.a1ace90cb9'] = { tr: 'Set Kapsamı', en: 'Kit Scope' };
+    dict['tr.417a21e9dc'] = { tr: 'Çanta Koruması', en: 'Case Protection' };
+    dict['tr.1f3aa6bca3'] = { tr: 'Dış Ölçü', en: 'External Dimensions' };
+    dict['tr.c96405a3b8'] = { tr: 'Sıcaklık', en: 'Temperature' };
+    dict['tr.d68dab28bb'] = { tr: 'Operasyonel Kapsam', en: 'Operational Scope' };
+    dict['tr.b0a246a577'] = { tr: 'Tek Çanta İçinde Dekontaminasyon, Koruma ve Medikal Sarf', en: 'Decontamination, Protection & Medical Supplies in One Case' };
+    dict['tr.e394f5a29c'] = { tr: 'Set İçeriği', en: 'Kit Contents' };
+    dict['tr.5d2e1fc332'] = { tr: 'Taşıma ve Muhafaza', en: 'Transport & Storage' };
+    dict['tr.a09fe706f9'] = { tr: 'Dekontaminasyon', en: 'Decontamination' };
+    dict['tr.bcdd80bc74'] = { tr: 'Kişisel Koruma', en: 'Personal Protection' };
+    dict['tr.382714586f'] = { tr: 'İlaç • Üretim • Kompres', en: 'Pharma • Production • Compress' };
+    dict['tr.4ee5c5ffb8'] = { tr: 'İlaç • Üretim • Cihaz', en: 'Pharma • Production • Device' };
+    dict['tr.b7b2b4bd99'] = { tr: 'İlaç • Üretim • Makine', en: 'Pharma • Production • Machine' };
+    dict['tr.db8630453c'] = { tr: 'İlaç • Hammaddeler', en: 'Pharma • Raw Materials' };
+    dict['tr.e376e41591'] = { tr: 'İlaç • Üretim', en: 'Pharma • Production' };
+    dict['tr.a396b30c33'] = { tr: 'KBRN • Koruyucu Elbise', en: 'CBRN • Protective Suit' };
+    dict['tr.abd7982c69'] = { tr: 'KBRN • Dedektör', en: 'CBRN • Detector' };
+    dict['tr.4e831c683e'] = { tr: 'İlk Yardım • Temel Set', en: 'First Aid • Basic Kit' };
+
     // ================================================================
     //  ENGINE
     // ================================================================
