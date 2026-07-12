@@ -1,0 +1,618 @@
+{
+  "tr.73129": {
+    "tr": "Öne Çıkan Özellikler",
+    "en": "Key Features"
+  },
+  "tr.14261": {
+    "tr": "Kullanım Alanları",
+    "en": "Areas of Use"
+  },
+  "tr.14527": {
+    "tr": "Ürün Görselleri",
+    "en": "Product Images"
+  },
+  "tr.9637": {
+    "tr": "İlgili Ürünler",
+    "en": "Related Products"
+  },
+  "tr.32177": {
+    "tr": "Sertifikalar & Standartlar",
+    "en": "Certificates & Standards"
+  },
+  "tr.18619": {
+    "tr": "Belge ve Standartlar",
+    "en": "Documents & Standards"
+  },
+  "tr.9543": {
+    "tr": "Set İçeriği",
+    "en": "Kit Contents"
+  },
+  "tr.21925": {
+    "tr": "Operasyonel Kapsam",
+    "en": "Operational Scope"
+  },
+  "tr.81609": {
+    "tr": "Modeller",
+    "en": "Models"
+  },
+  "tr.94515": {
+    "tr": "Teknik Özellikler",
+    "en": "Technical Specifications"
+  },
+  "tr.41416": {
+    "tr": "Boyutlar",
+    "en": "Dimensions"
+  },
+  "tr.29173": {
+    "tr": "Ağırlık",
+    "en": "Weight"
+  },
+  "tr.20569": {
+    "tr": "Vakum Kapasitesi",
+    "en": "Vacuum Capacity"
+  },
+  "tr.91906": {
+    "tr": "Vakum kapasitesi",
+    "en": "Vacuum Capacity"
+  },
+  "tr.39410": {
+    "tr": "Güç",
+    "en": "Power"
+  },
+  "tr.85707": {
+    "tr": "NATO stok no",
+    "en": "NATO Stock No"
+  },
+  "tr.37577": {
+    "tr": "Çanta ölçüsü",
+    "en": "Case Dimensions"
+  },
+  "tr.23550": {
+    "tr": "Set Kapsamı",
+    "en": "[EN] Set Kapsamı"
+  },
+  "tr.57664": {
+    "tr": "Çanta Koruması",
+    "en": "[EN] Çanta Koruması"
+  },
+  "tr.84982": {
+    "tr": "Dış Ölçü",
+    "en": "External Dimensions"
+  },
+  "tr.69926": {
+    "tr": "Sıcaklık",
+    "en": "Temperature"
+  },
+  "tr.59606": {
+    "tr": "Hız",
+    "en": "Speed"
+  },
+  "tr.39857": {
+    "tr": "Tork",
+    "en": "Torque"
+  },
+  "tr.12268": {
+    "tr": "Standartlar",
+    "en": "Standards"
+  },
+  "tr.6929": {
+    "tr": "Teknoloji",
+    "en": "Technology"
+  },
+  "tr.8548": {
+    "tr": "Tespit Seviyesi",
+    "en": "Detection Level"
+  },
+  "tr.7937": {
+    "tr": "Çalışma Sıcaklığı",
+    "en": "Operating Temperature"
+  },
+  "tr.75687": {
+    "tr": "Koruma Sınıfı",
+    "en": "Protection Class"
+  },
+  "tr.30173": {
+    "tr": "Formlar",
+    "en": "Forms"
+  },
+  "tr.50489": {
+    "tr": "Odak",
+    "en": "Focus"
+  },
+  "tr.85877": {
+    "tr": "Kullanım",
+    "en": "Usage"
+  },
+  "tr.56176": {
+    "tr": "Sterilite",
+    "en": "Sterility"
+  },
+  "tr.77288": {
+    "tr": "Etki",
+    "en": "Effect"
+  },
+  "tr.30247": {
+    "tr": "Uygulama",
+    "en": "Application"
+  },
+  "tr.31667": {
+    "tr": "Parça Sayısı",
+    "en": "Piece Count"
+  },
+  "tr.27126": {
+    "tr": "Taşıma",
+    "en": "Carry"
+  },
+  "tr.43011": {
+    "tr": "Kullanım Alanı",
+    "en": "Usage Area"
+  },
+  "tr.92638": {
+    "tr": "İçerik",
+    "en": "Contents"
+  },
+  "tr.19792": {
+    "tr": "Batarya",
+    "en": "Battery"
+  },
+  "tr.43785": {
+    "tr": "KBRN • Numune Alma",
+    "en": "CBRN • Sampling"
+  },
+  "tr.29626": {
+    "tr": "KBRN • Kişisel Dedektör",
+    "en": "CBRN • Personal Detector"
+  },
+  "tr.64357": {
+    "tr": "KBRN • Koruyucu Elbise",
+    "en": "CBRN • Protective Suit"
+  },
+  "tr.14121": {
+    "tr": "KBRN • Dekontaminasyon",
+    "en": "CBRN • Decontamination"
+  },
+  "tr.37113": {
+    "tr": "KBRN Dekontaminasyon ve İlk Yardım",
+    "en": "CBRN Decontamination & First Aid"
+  },
+  "tr.7677": {
+    "tr": "İlk Yardım • Bireysel Kiti",
+    "en": "First Aid • Individual Kit"
+  },
+  "tr.53164": {
+    "tr": "İlk Yardım • Temel Kiti",
+    "en": "First Aid • Basic Kit"
+  },
+  "tr.12471": {
+    "tr": "Ar-Ge • Hemostatik Formülasyon",
+    "en": "R&D • Hemostatic Formulation"
+  },
+  "tr.45218": {
+    "tr": "Medikal • Gaz Kompres",
+    "en": "Medical • Gas Compress"
+  },
+  "tr.61638": {
+    "tr": "Üretim • Test Cihazı",
+    "en": "Production • Test Device"
+  },
+  "tr.18847": {
+    "tr": "Üretim • Paketleme",
+    "en": "Production • Packaging"
+  },
+  "tr.53572": {
+    "tr": "Ar-Ge • İlaç Hammaddeleri",
+    "en": "R&D • Pharmaceutical Raw Materials"
+  },
+  "tr.37975": {
+    "tr": "Üretim • Tesis",
+    "en": "Production • Facility"
+  },
+  "tr.88958": {
+    "tr": "Yüksek çözünürlüklü iyon mobilite spektrometresi ile pozitif ve negatif modda ölçüm yapar.",
+    "en": "[EN] Yüksek çözünürlüklü iyon mobilite spektrometresi ile pozitif ve negatif modda ölçüm yapar."
+  },
+  "tr.69553": {
+    "tr": "PID veya ECD modülleri kullanıcı tarafından değiştirilebilir ek algılama kabiliyeti sağlar.",
+    "en": "[EN] PID veya ECD modülleri kullanıcı tarafından değiştirilebilir ek algılama kabiliyeti sağlar."
+  },
+  "tr.75300": {
+    "tr": "LED, akustik alarm ve madde adı/tepki göstergesi ile hızlı uyarı verir.",
+    "en": "[EN] LED, akustik alarm ve madde adı/tepki göstergesi ile hızlı uyarı verir."
+  },
+  "tr.90854": {
+    "tr": "CWA ve TIC kütüphaneleri daha geniş tehlikeli madde setlerine göre özelleştirilebilir.",
+    "en": "[EN] CWA ve TIC kütüphaneleri daha geniş tehlikeli madde setlerine göre özelleştirilebilir."
+  },
+  "tr.74673": {
+    "tr": "Araç ve üs kampı gözetimi",
+    "en": "[EN] Araç ve üs kampı gözetimi"
+  },
+  "tr.46340": {
+    "tr": "Sığınak/altyapı gaz izleme",
+    "en": "[EN] Sığınak/altyapı gaz izleme"
+  },
+  "tr.23008": {
+    "tr": "Koruyucu maske, eldiven ve botlarla birlikte bütüncül bariyer yaklaşımı oluşturur.",
+    "en": "[EN] Koruyucu maske, eldiven ve botlarla birlikte bütüncül bariyer yaklaşımı oluşturur."
+  },
+  "tr.93543": {
+    "tr": "KBRN olay yeri, dekontaminasyon hattı ve numune alma operasyonlarında personel güvenliğini destekler.",
+    "en": "[EN] KBRN olay yeri, dekontaminasyon hattı ve numune alma operasyonlarında personel güvenliğini destekler."
+  },
+  "tr.59930": {
+    "tr": "Hareket kabiliyetini koruyacak şekilde saha çalışmasına uygun tasarlanır.",
+    "en": "[EN] Hareket kabiliyetini koruyacak şekilde saha çalışmasına uygun tasarlanır."
+  },
+  "tr.39985": {
+    "tr": "Acil müdahale sahaları",
+    "en": "[EN] Acil müdahale sahaları"
+  },
+  "tr.8075": {
+    "tr": "Turnike, hemostatik pansuman ve acil bandaj ile kanama kontrolünü destekler.",
+    "en": "[EN] Turnike, hemostatik pansuman ve acil bandaj ile kanama kontrolünü destekler."
+  },
+  "tr.58646": {
+    "tr": "NPA, makas, marker, medikal bant ve elastik bandaj ile travma müdahalesini tamamlar.",
+    "en": "[EN] NPA, makas, marker, medikal bant ve elastik bandaj ile travma müdahalesini tamamlar."
+  },
+  "tr.47687": {
+    "tr": "Burn gel, burn dressing ve acil battaniye yanık/hipotermi risklerinde kullanılır.",
+    "en": "[EN] Burn gel, burn dressing ve acil battaniye yanık/hipotermi risklerinde kullanılır."
+  },
+  "tr.3550": {
+    "tr": "Güvenlik ve kurtarma ekipleri",
+    "en": "[EN] Güvenlik ve kurtarma ekipleri"
+  },
+  "tr.92681": {
+    "tr": "Araç ve kişisel travma kiti",
+    "en": "[EN] Araç ve kişisel travma kiti"
+  },
+  "tr.71110": {
+    "tr": "Steril gazlı bez, sargı bezi, elastik bandaj ve yara bandı gibi temel sarflar içerir.",
+    "en": "[EN] Steril gazlı bez, sargı bezi, elastik bandaj ve yara bandı gibi temel sarflar içerir."
+  },
+  "tr.23488": {
+    "tr": "Antiseptik solüsyon/mendil, nitril eldiven, makas ve cımbız ile müdahale hijyenini destekler.",
+    "en": "[EN] Antiseptik solüsyon/mendil, nitril eldiven, makas ve cımbız ile müdahale hijyenini destekler."
+  },
+  "tr.44932": {
+    "tr": "Acil durum battaniyesi ve ilk yardım kılavuzu ile genel acil durum hazırlığını artırır.",
+    "en": "[EN] Acil durum battaniyesi ve ilk yardım kılavuzu ile genel acil durum hazırlığını artırır."
+  },
+  "tr.72690": {
+    "tr": "Araç ve filo güvenliği",
+    "en": "[EN] Araç ve filo güvenliği"
+  },
+  "tr.72719": {
+    "tr": "Hızlı kanama kontrolüne yardımcı formülasyon",
+    "en": "[EN] Hızlı kanama kontrolüne yardımcı formülasyon"
+  },
+  "tr.87078": {
+    "tr": "Pıhtılaşma sürecini destekleyen aktif bileşenler",
+    "en": "[EN] Pıhtılaşma sürecini destekleyen aktif bileşenler"
+  },
+  "tr.99470": {
+    "tr": "Doğrudan yara yüzeyine uygulama kolaylığı",
+    "en": "[EN] Doğrudan yara yüzeyine uygulama kolaylığı"
+  },
+  "tr.55017": {
+    "tr": "Yara yüzeyinde hijyen desteği",
+    "en": "[EN] Yara yüzeyinde hijyen desteği"
+  },
+  "tr.48753": {
+    "tr": "Enfeksiyon riskini azaltmaya yardımcı",
+    "en": "[EN] Enfeksiyon riskini azaltmaya yardımcı"
+  },
+  "tr.12021": {
+    "tr": "Travma kaynaklı kanamalarda ilk müdahale",
+    "en": "[EN] Travma kaynaklı kanamalarda ilk müdahale"
+  },
+  "tr.87118": {
+    "tr": "Askeri ve sivil savunma senaryoları",
+    "en": "[EN] Askeri ve sivil savunma senaryoları"
+  },
+  "tr.70039": {
+    "tr": "İlk yardım çantalarında yer alabilir",
+    "en": "[EN] İlk yardım çantalarında yer alabilir"
+  },
+  "tr.30140": {
+    "tr": "Cerrahi operasyonlarda kanama kontrolü",
+    "en": "[EN] Cerrahi operasyonlarda kanama kontrolü"
+  },
+  "tr.34251": {
+    "tr": "Acil servis müdahaleleri",
+    "en": "[EN] Acil servis müdahaleleri"
+  },
+  "tr.79796": {
+    "tr": "Motor Gücü",
+    "en": "[EN] Motor Gücü"
+  },
+  "tr.23731": {
+    "tr": "Hız Aralığı",
+    "en": "[EN] Hız Aralığı"
+  },
+  "tr.56486": {
+    "tr": "Tork Değeri",
+    "en": "[EN] Tork Değeri"
+  },
+  "tr.13448": {
+    "tr": "Modüler Yapı",
+    "en": "[EN] Modüler Yapı"
+  },
+  "tr.34785": {
+    "tr": "Tablet ve kapsüllerin çözünme hızı tayini",
+    "en": "[EN] Tablet ve kapsüllerin çözünme hızı tayini"
+  },
+  "tr.78141": {
+    "tr": "Otomatik örnekleme sistemleriyle entegrasyon",
+    "en": "[EN] Otomatik örnekleme sistemleriyle entegrasyon"
+  },
+  "tr.73342": {
+    "tr": "Tablet dağılma (disintegration) süresi tayini",
+    "en": "[EN] Tablet dağılma (disintegration) süresi tayini"
+  },
+  "tr.18244": {
+    "tr": "Tablet aşınma (friability) direnci ölçümü",
+    "en": "[EN] Tablet aşınma (friability) direnci ölçümü"
+  },
+  "tr.42720": {
+    "tr": "Granül, pellet ve kaplı tablet testleri",
+    "en": "[EN] Granül, pellet ve kaplı tablet testleri"
+  },
+  "tr.57670": {
+    "tr": "PLC kontrollü tam otomatik çalışma",
+    "en": "[EN] PLC kontrollü tam otomatik çalışma"
+  },
+  "tr.65670": {
+    "tr": "Dokunmatik ekran ile kolay operatör kontrolü",
+    "en": "[EN] Dokunmatik ekran ile kolay operatör kontrolü"
+  },
+  "tr.91018": {
+    "tr": "Seçilebilir swab adedi (1-5 arası programlanabilir)",
+    "en": "[EN] Seçilebilir swab adedi (1-5 arası programlanabilir)"
+  },
+  "tr.95548": {
+    "tr": "ISO 13485 medikal cihaz üretim standartlarına uygun",
+    "en": "[EN] ISO 13485 medikal cihaz üretim standartlarına uygun"
+  },
+  "tr.58120": {
+    "tr": "Mevcut swab katlama ve paketleme hatlarına entegre edilebilir",
+    "en": "[EN] Mevcut swab katlama ve paketleme hatlarına entegre edilebilir"
+  },
+  "tr.66109": {
+    "tr": "Çalışma Alanı",
+    "en": "[EN] Çalışma Alanı"
+  },
+  "tr.79068": {
+    "tr": "Kalite Standardı",
+    "en": "[EN] Kalite Standardı"
+  },
+  "tr.71940": {
+    "tr": "Hemostatik etken maddeler ve kan durdurucu formülasyonlar",
+    "en": "[EN] Hemostatik etken maddeler ve kan durdurucu formülasyonlar"
+  },
+  "tr.81954": {
+    "tr": "Dil altı ilaç formülasyonları için API sentezi",
+    "en": "[EN] Dil altı ilaç formülasyonları için API sentezi"
+  },
+  "tr.11691": {
+    "tr": "Kontrollü ortamda reaksiyon optimizasyonu",
+    "en": "[EN] Kontrollü ortamda reaksiyon optimizasyonu"
+  },
+  "tr.11513": {
+    "tr": "Analitik yöntem geliştirme ve validasyon",
+    "en": "[EN] Analitik yöntem geliştirme ve validasyon"
+  },
+  "tr.68457": {
+    "tr": "İç ölçü: 335 x 250 x 122 mm",
+    "en": "[EN] İç ölçü: 335 x 250 x 122 mm"
+  },
+  "tr.6273": {
+    "tr": "Malzeme: PP, polipropilen enjeksiyon gövde",
+    "en": "[EN] Malzeme: PP, polipropilen enjeksiyon gövde"
+  },
+  "tr.84952": {
+    "tr": "Sıcaklık dayanımı: -30°C / +90°C",
+    "en": "[EN] Sıcaklık dayanımı: -30°C / +90°C"
+  },
+  "tr.5213": {
+    "tr": "Hafif, tekli ambalajlı ve kullanıma hazır form",
+    "en": "[EN] Hafif, tekli ambalajlı ve kullanıma hazır form"
+  },
+  "tr.37962": {
+    "tr": "Sıvı kontaminasyon üzerinde güvenli uygulama amacı",
+    "en": "[EN] Sıvı kontaminasyon üzerinde güvenli uygulama amacı"
+  },
+  "tr.99636": {
+    "tr": "Yüzey dekontaminasyon kapasitesi: 1 m²’ye kadar",
+    "en": "[EN] Yüzey dekontaminasyon kapasitesi: 1 m²’ye kadar"
+  },
+  "tr.95279": {
+    "tr": "Temizlik kapasitesi hesabı: 10 g/m² toprak/kirlilik seviyesi",
+    "en": "[EN] Temizlik kapasitesi hesabı: 10 g/m² toprak/kirlilik seviyesi"
+  },
+  "tr.67661": {
+    "tr": "Asker, acil müdahale ekibi ve saha personeli kullanımı için uygundur",
+    "en": "[EN] Asker, acil müdahale ekibi ve saha personeli kullanımı için uygundur"
+  },
+  "tr.92568": {
+    "tr": "İçerik: 150 ml Fullers Earth",
+    "en": "[EN] İçerik: 150 ml Fullers Earth"
+  },
+  "tr.51213": {
+    "tr": "Bileşim: alumina, silika, demir oksitleri, kireç, magnezya ve su",
+    "en": "[EN] Bileşim: alumina, silika, demir oksitleri, kireç, magnezya ve su"
+  },
+  "tr.11089": {
+    "tr": "Elle kolay uygulama ve uzun süreli depolama stabilitesi",
+    "en": "[EN] Elle kolay uygulama ve uzun süreli depolama stabilitesi"
+  },
+  "tr.58444": {
+    "tr": "MSDS dokümanı ile sağlanır; NSN: 6505-27-014-1446",
+    "en": "[EN] MSDS dokümanı ile sağlanır; NSN: 6505-27-014-1446"
+  },
+  "tr.99556": {
+    "tr": "Malzeme: özel ahşap",
+    "en": "[EN] Malzeme: özel ahşap"
+  },
+  "tr.96342": {
+    "tr": "Temizlenmiş ve zımparalanmış yüzey",
+    "en": "[EN] Temizlenmiş ve zımparalanmış yüzey"
+  },
+  "tr.27814": {
+    "tr": "Tekli steril ambalaj seçeneği",
+    "en": "[EN] Tekli steril ambalaj seçeneği"
+  },
+  "tr.26187": {
+    "tr": "Etanol oranı: %5",
+    "en": "[EN] Etanol oranı: %5"
+  },
+  "tr.13920": {
+    "tr": "Hipoalerjenik formül bilgisi",
+    "en": "[EN] Hipoalerjenik formül bilgisi"
+  },
+  "tr.54561": {
+    "tr": "Sağlık Bakanlığı üretim izin belgesi bilgisi",
+    "en": "[EN] Sağlık Bakanlığı üretim izin belgesi bilgisi"
+  },
+  "tr.81602": {
+    "tr": "Yüzey uygulaması için temizlik solüsyonu",
+    "en": "[EN] Yüzey uygulaması için temizlik solüsyonu"
+  },
+  "tr.73640": {
+    "tr": "Alüminyum ve yumuşak metal yüzeylerde kullanılmamalıdır",
+    "en": "[EN] Alüminyum ve yumuşak metal yüzeylerde kullanılmamalıdır"
+  },
+  "tr.72994": {
+    "tr": "Asit içeren ürünlerden uzak tutulmalıdır",
+    "en": "[EN] Asit içeren ürünlerden uzak tutulmalıdır"
+  },
+  "tr.27515": {
+    "tr": "El ve vücut temizliği için uygun değildir",
+    "en": "[EN] El ve vücut temizliği için uygun değildir"
+  },
+  "tr.24359": {
+    "tr": "Kullanımda koruyucu eldiven ve gözlük önerilir",
+    "en": "[EN] Kullanımda koruyucu eldiven ve gözlük önerilir"
+  },
+  "tr.5559": {
+    "tr": "Konsantrasyon: %5 sodyum klorür",
+    "en": "[EN] Konsantrasyon: %5 sodyum klorür"
+  },
+  "tr.11451": {
+    "tr": "Farmasötik form: berrak, renksiz, partikülsüz göz damlası",
+    "en": "[EN] Farmasötik form: berrak, renksiz, partikülsüz göz damlası"
+  },
+  "tr.96177": {
+    "tr": "Uygulama öncesi el temizliği ve uç kontaminasyonundan kaçınma notu",
+    "en": "[EN] Uygulama öncesi el temizliği ve uç kontaminasyonundan kaçınma notu"
+  },
+  "tr.60066": {
+    "tr": "Kullanım, kurum/hekim talimatına göre yapılmalıdır",
+    "en": "[EN] Kullanım, kurum/hekim talimatına göre yapılmalıdır"
+  },
+  "tr.45203": {
+    "tr": "Paket ölçüsü: 10 x 12.7 cm",
+    "en": "[EN] Paket ölçüsü: 10 x 12.7 cm"
+  },
+  "tr.79743": {
+    "tr": "Kullanım sıcaklığı: 0°C / +70°C",
+    "en": "[EN] Kullanım sıcaklığı: 0°C / +70°C"
+  },
+  "tr.31167": {
+    "tr": "Raf ömrü: açılmamış ambalajda 5 yıl; EAR99 bilgisi",
+    "en": "[EN] Raf ömrü: açılmamış ambalajda 5 yıl; EAR99 bilgisi"
+  },
+  "tr.20520": {
+    "tr": "İçerik: su, magnezyum oksit, titanyum dioksit, çinko oksit, etoksillenmiş alkoller",
+    "en": "[EN] İçerik: su, magnezyum oksit, titanyum dioksit, çinko oksit, etoksillenmiş alkoller"
+  },
+  "tr.76652": {
+    "tr": "Tırnak, el ve cerrahi alet temizliği için kullanılır",
+    "en": "[EN] Tırnak, el ve cerrahi alet temizliği için kullanılır"
+  },
+  "tr.90009": {
+    "tr": "Otoklavlanabilir ve tekrar kullanıma uygundur",
+    "en": "[EN] Otoklavlanabilir ve tekrar kullanıma uygundur"
+  },
+  "tr.17938": {
+    "tr": "Ergonomik ve emici olmayan tutma yüzeyi",
+    "en": "[EN] Ergonomik ve emici olmayan tutma yüzeyi"
+  },
+  "tr.68236": {
+    "tr": "Medikal personel, klinisyen, cerrah ve saha kullanımı için uygundur",
+    "en": "[EN] Medikal personel, klinisyen, cerrah ve saha kullanımı için uygundur"
+  },
+  "tr.88764": {
+    "tr": "Kapalı steril ambalaj",
+    "en": "[EN] Kapalı steril ambalaj"
+  },
+  "tr.86261": {
+    "tr": "Tampon ve yara temizliği amacıyla kullanılabilir",
+    "en": "[EN] Tampon ve yara temizliği amacıyla kullanılabilir"
+  },
+  "tr.9203": {
+    "tr": "Yaygın ölçüler: 5 x 5, 7.5 x 7.5 ve 10 x 10 cm",
+    "en": "[EN] Yaygın ölçüler: 5 x 5, 7.5 x 7.5 ve 10 x 10 cm"
+  },
+  "tr.88089": {
+    "tr": "Ölçü: 100 mm x 400 mm",
+    "en": "[EN] Ölçü: 100 mm x 400 mm"
+  },
+  "tr.27297": {
+    "tr": "Üst katman: hijyen onaylı beyaz HDPE",
+    "en": "[EN] Üst katman: hijyen onaylı beyaz HDPE"
+  },
+  "tr.76196": {
+    "tr": "Emici katman: emici ve bağlayıcı lif karışımı",
+    "en": "[EN] Emici katman: emici ve bağlayıcı lif karışımı"
+  },
+  "tr.32116": {
+    "tr": "Nominal ped emiciliği: 128.0 cm³",
+    "en": "[EN] Nominal ped emiciliği: 128.0 cm³"
+  },
+  "tr.37785": {
+    "tr": "Lateks içermez; lateks hassasiyeti olan kullanıcılar için uygundur",
+    "en": "[EN] Lateks içermez; lateks hassasiyeti olan kullanıcılar için uygundur"
+  },
+  "tr.25979": {
+    "tr": "Tek kullanımlık, iki ele de uyumlu yapı",
+    "en": "[EN] Tek kullanımlık, iki ele de uyumlu yapı"
+  },
+  "tr.45044": {
+    "tr": "Koruma standardı: EN 149:2001+A1:2009 FFP2 NR D",
+    "en": "[EN] Koruma standardı: EN 149:2001+A1:2009 FFP2 NR D"
+  },
+  "tr.28837": {
+    "tr": "NR: tekrar kullanıma uygun değildir",
+    "en": "[EN] NR: tekrar kullanıma uygun değildir"
+  },
+  "tr.11068": {
+    "tr": "Dolomit testinden geçmiş D sınıfı",
+    "en": "[EN] Dolomit testinden geçmiş D sınıfı"
+  },
+  "tr.8928": {
+    "tr": "Hydro-Charging Technology ile meltblown filtre katmanı",
+    "en": "[EN] Hydro-Charging Technology ile meltblown filtre katmanı"
+  },
+  "tr.50387": {
+    "tr": "Burun süngeri, içten burun klipsi, örme ve ayarlanabilir baş bandı",
+    "en": "[EN] Burun süngeri, içten burun klipsi, örme ve ayarlanabilir baş bandı"
+  },
+  "tr.81332": {
+    "tr": "Kask kullanımına uygun tasarım ve dikey katlanabilir yapı",
+    "en": "[EN] Kask kullanımına uygun tasarım ve dikey katlanabilir yapı"
+  },
+  "tr.33161": {
+    "tr": "Dezenfektan yıkama solüsyonu için üretim izin belgesi bilgisi.",
+    "en": "[EN] Dezenfektan yıkama solüsyonu için üretim izin belgesi bilgisi."
+  },
+  "tr.18476": {
+    "tr": "Kalite yönetimi ve üretim uygulamalarına ilişkin sertifika ikonları yer alır.",
+    "en": "[EN] Kalite yönetimi ve üretim uygulamalarına ilişkin sertifika ikonları yer alır."
+  },
+  "tr.44799": {
+    "tr": "Serum ve fırça öğelerinde uygunluk belgesi görselleri dokümana eklenmiştir.",
+    "en": "[EN] Serum ve fırça öğelerinde uygunluk belgesi görselleri dokümana eklenmiştir."
+  }
+}
