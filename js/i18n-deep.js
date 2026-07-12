@@ -1315,11 +1315,12 @@
                     if (parent.hasAttribute && parent.hasAttribute('data-i18n')) {
                         return NodeFilter.FILTER_REJECT;
                     }
-                    // Check if any ancestor has data-i18n
+                    // Check if any ancestor has data-i18n or data-i18n-skip
                     let p = parent;
                     while (p && p !== root) {
-                        if (p.hasAttribute && p.hasAttribute('data-i18n')) {
-                            return NodeFilter.FILTER_REJECT;
+                        if (p.hasAttribute) {
+                            if (p.hasAttribute('data-i18n')) return NodeFilter.FILTER_REJECT;
+                            if (p.hasAttribute('data-i18n-skip')) return NodeFilter.FILTER_REJECT;
                         }
                         p = p.parentElement;
                     }
@@ -1342,7 +1343,16 @@
         );
 
         let node;
-        const replaced = new Set(); // Track which text nodes we've already processed
+        const replaced = new Set();
+        
+        // Helper: escape regex special chars
+        function escapeRx(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+        
+        // Helper: build word-boundary regex that works with Turkish chars
+        function wordBoundaryRx(word) {
+            return new RegExp('(^|[\\s.,!?;:()\\[\\]{}<>"\'\\-–—/])(' + escapeRx(word) + ')(?=[\\s.,!?;:()\\[\\]{}<>"\'\\-–—/]|$)', 'g');
+        }
+        
         while (node = walker.nextNode()) {
             if (replaced.has(node)) continue;
             let text = node.textContent.trim();
@@ -1353,30 +1363,45 @@
             if (exactMap.has(text)) {
                 node.textContent = exactMap.get(text);
                 replaced.add(node);
-                modified = true;
-            } else {
-                // Try phrase replacements (longest first from tr2en)
-                for (const [tr, en] of tr2en) {
-                    if (tr.length < 4) continue; // skip single words in phrase pass
-                    if (text.includes(tr)) {
-                        text = text.replace(new RegExp(tr.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), en);
+                continue;
+            }
+            
+            // Try phrase replacements (4+ chars only, using word boundaries)
+            for (const [tr, en] of tr2en) {
+                if (tr.length < 4) continue; // skip very short terms
+                if (text.includes(tr)) {
+                    const rx = wordBoundaryRx(tr);
+                    const newText = text.replace(rx, function(m, before, matched) {
+                        return before + en;
+                    });
+                    if (newText !== text) {
+                        text = newText;
                         modified = true;
                     }
                 }
-                // Now try word-level replacements (shorter terms)
-                if (modified || text.length < 50) {
-                    for (const { prefix, en, len } of startsWith) {
-                        if (len < 4) continue; // Skip very short terms in word pass
-                        if (text.includes(prefix)) {
-                            text = text.replace(new RegExp(prefix.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'), en);
+            }
+            
+            // Try single-word replacements (4+ chars, word boundary)
+            if (!modified) {
+                for (const { prefix, en, len } of startsWith) {
+                    if (len < 4) continue;
+                    if (text.includes(prefix)) {
+                        const rx = wordBoundaryRx(prefix);
+                        const newText = text.replace(rx, function(m, before, matched) {
+                            return before + en;
+                        });
+                        if (newText !== text) {
+                            text = newText;
                             modified = true;
+                            break; // one pass at a time to avoid cascading
                         }
                     }
                 }
-                if (modified) {
-                    node.textContent = text;
-                    replaced.add(node);
-                }
+            }
+            
+            if (modified) {
+                node.textContent = text;
+                replaced.add(node);
             }
         }
     }
