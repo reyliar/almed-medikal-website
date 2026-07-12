@@ -488,29 +488,33 @@ const I18N = (function() {
     function injectSwitcher() {
         const topBarInner = document.querySelector('.top-bar-inner');
         if (!topBarInner) return;
-
-        // Don't inject if already exists
         if (topBarInner.querySelector('.lang-switcher')) return;
 
-        // Get current page filename
         const path = window.location.pathname;
+        const isEn = path.includes('/en/');
         const filename = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-        const enUrl = 'en/' + filename;
+        
+        // On /en/ pages: TR goes to ../page.html, EN stays
+        // On root pages: TR stays, EN goes to en/page.html
+        const trUrl = isEn ? '../' + filename : '#';
+        const enUrl = isEn ? '#' : 'en/' + filename;
+        const trActive = !isEn;
+        const enActive = isEn;
 
         const switcher = document.createElement('div');
         switcher.className = 'lang-switcher';
         switcher.innerHTML = `
-            <button class="lang-switch-btn active" aria-label="Türkçe">TR</button>
+            <a href="${trUrl}" class="lang-switch-btn${trActive ? ' active' : ''}" aria-label="Türkçe">TR</a>
             <span class="lang-divider">|</span>
-            <a href="${enUrl}" class="lang-switch-btn" aria-label="English">EN</a>
+            <a href="${enUrl}" class="lang-switch-btn${enActive ? ' active' : ''}" aria-label="English">EN</a>
         `;
         topBarInner.appendChild(switcher);
     }
 
     /** Initialize the i18n system */
     function init() {
-        // Always default to Turkish on root pages. EN pages are in /en/ folder.
-        const lang = 'tr';
+        // Auto-detect language from URL path: /en/... = English, otherwise Turkish
+        const lang = window.location.pathname.includes('/en/') ? 'en' : 'tr';
         injectSwitcher();
         applyLang(lang);
     }
