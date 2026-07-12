@@ -66,7 +66,7 @@ body { font-family:var(--font-body); background:var(--bg-primary); color:var(--t
 
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switcher { display:flex; align-items:center; gap:2px; margin-left:18px; }
-.lang-switch-btn { background:none; border:1px solid rgba(255,255,255,.35); color:rgba(255,255,255,.75); padding:2px 8px; border-radius:4px; font-size:.68rem; font-weight:700; cursor:pointer; transition:all .2s; font-family:var(--font-body); letter-spacing:.03em; line-height:1.5; }
+.lang-switch-btn { background:none; border:1px solid rgba(255,255,255,.35); color:rgba(255,255,255,.75); padding:2px 8px; border-radius:4px; font-size:.68rem; font-weight:700; cursor:pointer; transition:all .2s; font-family:var(--font-body); letter-spacing:.03em; line-height:1.5; text-decoration:none; display:inline-block; }
 .lang-switch-btn:hover { background:rgba(255,255,255,.15); color:#fff; border-color:rgba(255,255,255,.6); }
 .lang-switch-btn.active { background:#fff; color:var(--primary); border-color:#fff; font-weight:800; }
 .lang-divider { color:rgba(255,255,255,.3); font-size:.65rem; margin:0 1px; user-select:none; }
