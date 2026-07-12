@@ -520,6 +520,30 @@ const I18N = (function() {
     dict['kbrnnum.usage.3'] = { tr: 'Şüpheli kimyasal/biyolojik kontaminasyon araştırması', en: 'Suspected chemical/biological contamination investigation' };;
     dict['kbrnnum.usage.4'] = { tr: 'SIBCRA odaklı numune alma süreçleri', en: 'SIBCRA-focused sampling processes' };;
 
+    dict['products.sidebar.title'] = { tr: 'Kategoriler', en: 'Categories' };
+    dict['tr.3314'] = { tr: 'Biyolojik ve kimyasal harp maddesi tehdidi bulunan alanlarda hava, su, toprak, yüzey, materyal ve canlı/çevresel kaynaklardan numune almak ve güvenli taşıma zincirini kurmak için hazırlanmış taşınabilir hardcase kit.', en: 'Portable hardcase kit for sampling from air, water, soil, surfaces, materials, and living/environmental sources in areas with biological and chemical warfare agent threats, with secure transport chain.' };
+    dict['tr.89076'] = { tr: 'AIRSENSE GDA-P; askeri ve sivil güvenlik operasyonlarında kimyasal savaş ajanları, toksik endüstriyel kimyasallar ve tehlikeli gazların kişisel ölçekte tespiti için geliştirilmiş taşınabilir dedektördür.', en: 'AIRSENSE GDA-P is a portable detector developed for personal-scale detection of chemical warfare agents, toxic industrial chemicals, and hazardous gases in military and civil security operations.' };
+    dict['tr.41068'] = { tr: 'Dekontaminasyon, göz/nazal temizlik, koruyucu sarf ve ilk müdahale öğelerini tek IP65 çanta içinde toplayan saha seti.', en: 'Field kit combining decontamination, eye/nasal cleaning, protective supplies, and first response items in a single IP65 case.' };
+    dict['tr.3648'] = { tr: 'KBRN tehdidi bulunan sahalarda personelin cilt, solunum ve ekipman temas risklerini azaltmaya yönelik koruyucu giyim ve iş elbise sistemleri.', en: 'Protective clothing and work suit systems designed to reduce skin, respiratory, and equipment contact risks for personnel in CBRN-threat areas.' };
+    dict['tr.44066'] = { tr: 'VANGUARD IFAK; ağır kanama, yanık, hava yolu, yara kapatma, immobilizasyon ve hipotermi risklerine hızlı müdahale için hazırlanmış bireysel ilk yardım kitidir.', en: 'VANGUARD IFAK is an individual first aid kit prepared for rapid response to severe bleeding, burns, airway, wound closure, immobilization, and hypothermia risks.' };
+    dict['tr.4866'] = { tr: 'Ev, iş yeri, araç ve saha kullanımında temel yara bakımı, pansuman, koruma ve acil durum müdahaleleri için düzenlenmiş kompakt ilk yardım çantası.', en: 'Compact first aid kit organized for basic wound care, dressing, protection, and emergency interventions in home, workplace, vehicle, and field use.' };
+    dict['tr.62920'] = { tr: 'Hızlı pıhtılaşma ve kanama kontrolü hedefiyle geliştirilen hemostatik formülasyonlar; toz, granül, emdirilmiş gazlı bez ve sprey gibi farklı uygulama formlarında çalışılabilir.', en: 'Hemostatic formulations developed for rapid clotting and bleeding control; available in various application forms including powder, granules, impregnated gauze, and spray.' };
+    dict['tr.48940'] = { tr: 'IMS + PID veya IMS + ECD', en: 'IMS + PID or IMS + ECD' };
+    dict['tr.20256'] = { tr: '13 öğe', en: '13 items' };
+    dict['tr.76429'] = { tr: 'FFP2 / eldiven / sarf', en: 'FFP2 / gloves / supplies' };
+    dict['tr.80287'] = { tr: 'Tam vücut bariyer koruması', en: 'Full body barrier protection' };
+    dict['tr.96718'] = { tr: 'Saha müdahale ve dekontaminasyon', en: 'Field response and decontamination' };
+    dict['tr.19507'] = { tr: 'Maske, eldiven ve bot entegrasyonu', en: 'Mask, glove, and boot integration' };
+    dict['tr.69859'] = { tr: '19 travma/ilk yardım öğesi', en: '19 trauma/first aid items' };
+    dict['tr.96056'] = { tr: 'MOLLE sistem çanta', en: 'MOLLE system pouch' };
+    dict['tr.96170'] = { tr: 'Kanama, hava yolu, yanık, immobilizasyon', en: 'Bleeding, airway, burns, immobilization' };
+    dict['tr.465'] = { tr: 'Temel pansuman ve sarf malzemeleri', en: 'Basic dressing and consumable supplies' };
+    dict['tr.44476'] = { tr: 'Kompakt çanta', en: 'Compact bag' };
+    dict['tr.6808'] = { tr: 'Ev, araç, ofis, saha', en: 'Home, vehicle, office, field' };
+    dict['tr.11059'] = { tr: 'Toz, granül, gaz kompres, sprey', en: 'Powder, granules, gas compress, spray' };
+    dict['tr.94086'] = { tr: 'Hızlı kanama kontrolü', en: 'Rapid bleeding control' };
+    dict['tr.39331'] = { tr: 'Travma, cerrahi, acil servis', en: 'Trauma, surgical, emergency department' };
+
     // ================================================================
     //  ENGINE
     // ================================================================
