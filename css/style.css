@@ -65,11 +65,12 @@ body { font-family:var(--font-body); background:var(--bg-primary); color:var(--t
 .top-bar i { margin-right:6px; font-size:.7rem; opacity:.8; }
 
 /* ===== LANGUAGE SWITCHER ===== */
-.lang-switcher { display:flex; align-items:center; gap:2px; margin-left:18px; }
-.lang-switch-btn { background:none; border:1px solid rgba(255,255,255,.35); color:rgba(255,255,255,.75); padding:2px 8px; border-radius:4px; font-size:.68rem; font-weight:700; cursor:pointer; transition:all .2s; font-family:var(--font-body); letter-spacing:.03em; line-height:1.5; text-decoration:none; display:inline-block; }
-.lang-switch-btn:hover { background:rgba(255,255,255,.15); color:#fff; border-color:rgba(255,255,255,.6); }
-.lang-switch-btn.active { background:#fff; color:var(--primary); border-color:#fff; font-weight:800; }
-.lang-divider { color:rgba(255,255,255,.3); font-size:.65rem; margin:0 1px; user-select:none; }
+.lang-switcher { display:flex; align-items:center; gap:4px; margin-left:18px; padding:2px; border:1px solid rgba(255,255,255,.35); border-radius:999px; background:rgba(255,255,255,.1); }
+.lang-switch-btn { background:transparent; border:1px solid transparent; color:rgba(255,255,255,.72); padding:3px 10px; border-radius:999px; font-size:.68rem; font-weight:800; cursor:pointer; transition:all .2s; font-family:var(--font-body); letter-spacing:.03em; line-height:1.5; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; min-width:34px; }
+.lang-switch-btn:hover { background:rgba(255,255,255,.16); color:#fff; }
+.lang-switch-btn.active { background:#fff; color:var(--primary-dark); border-color:#fff; box-shadow:0 4px 12px rgba(0,0,0,.16); }
+.lang-switch-btn.active::before { content:'✓'; font-size:.62rem; margin-right:4px; line-height:1; }
+.lang-divider { display:none; }
 
 .navbar { position:fixed; top:36px; left:0; width:100%; z-index:1000; padding:0; background:rgba(255,255,255,.85); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border-bottom:1px solid transparent; transition:all var(--duration-normal) var(--ease-out), transform .35s cubic-bezier(.22,.61,.36,1); }
 .navbar.scrolled { background:rgba(255,255,255,.95); border-bottom:1px solid var(--border-light); box-shadow:var(--shadow-sm); }

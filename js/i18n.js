@@ -11,6 +11,12 @@ const I18N = (function() {
 
     // ==================== TRANSLATION DICTIONARY ====================
     const dict = {};
+    const EXTERNAL_SOURCES = [
+        { file: 'all_translations.json', skipUntranslated: true },
+        { file: 'tr_en_map.json', skipUntranslated: false },
+        { file: 'i18n-extra.json', skipUntranslated: false }
+    ];
+    let externalLoadPromise = null;
 
     // --- Shared / Global ---
     dict['nav.home'] = { tr: 'Anasayfa', en: 'Home' };;
@@ -406,6 +412,54 @@ const I18N = (function() {
         try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) { /* ignore */ }
     }
 
+    function getAssetsBase() {
+        return window.location.pathname.includes('/en/') ? '../js/' : 'js/';
+    }
+
+    function normalizeText(value) {
+        return String(value || '').replace(/\s+/g, ' ').trim();
+    }
+
+    function mergeTranslations(data, options) {
+        if (!data || typeof data !== 'object') return;
+        Object.keys(data).forEach(key => {
+            const entry = data[key];
+            if (!entry || typeof entry !== 'object') return;
+
+            const tr = entry.tr || entry.en;
+            const en = entry.en || entry.tr;
+            if (!tr || !en) return;
+            if (options.skipUntranslated && normalizeText(tr) === normalizeText(en)) return;
+
+            dict[key] = { tr, en };
+        });
+    }
+
+    function loadExternalDictionaries() {
+        if (externalLoadPromise) return externalLoadPromise;
+
+        const base = getAssetsBase();
+        externalLoadPromise = Promise.all(EXTERNAL_SOURCES.map(source => {
+            return fetch(base + source.file, { cache: 'no-cache' })
+                .then(response => response.ok ? response.json() : null)
+                .then(data => mergeTranslations(data, source))
+                .catch(() => null);
+        }));
+
+        return externalLoadPromise;
+    }
+
+    function translateAutoItem(el, lang) {
+        const original = el.getAttribute('data-i18n-source') || el.textContent.trim();
+        if (!el.hasAttribute('data-i18n-source')) {
+            el.setAttribute('data-i18n-source', original);
+        }
+
+        const match = original.match(/\d+/);
+        const number = match ? match[0] : '';
+        return (lang === 'en' ? 'Item' : 'Öğe') + (number ? ' ' + number : '');
+    }
+
     /** Translate a single key to the target language */
     function t(key, lang) {
         const entry = dict[key];
@@ -426,6 +480,11 @@ const I18N = (function() {
         elements.forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (!key) return;
+            if (key === 'auto.item') {
+                el.textContent = translateAutoItem(el, lang);
+                return;
+            }
+
             const translated = t(key, lang);
             if (translated === key) return; // no translation found
 
@@ -480,7 +539,10 @@ const I18N = (function() {
     /** Update the language toggle button visuals */
     function updateSwitcherUI(lang) {
         document.querySelectorAll('.lang-switch-btn').forEach(btn => {
-            btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+            const isActive = btn.getAttribute('data-lang') === lang;
+            btn.classList.toggle('active', isActive);
+            btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            btn.setAttribute('aria-current', isActive ? 'true' : 'false');
         });
     }
 
@@ -496,17 +558,18 @@ const I18N = (function() {
         
         // On /en/ pages: TR goes to ../page.html, EN stays
         // On root pages: TR stays, EN goes to en/page.html
-        const trUrl = isEn ? '../' + filename : '#';
-        const enUrl = isEn ? '#' : 'en/' + filename;
+        const trUrl = isEn ? '../' + filename : filename;
+        const enUrl = isEn ? filename : 'en/' + filename;
         const trActive = !isEn;
         const enActive = isEn;
 
         const switcher = document.createElement('div');
         switcher.className = 'lang-switcher';
+        switcher.setAttribute('aria-label', 'Site language');
         switcher.innerHTML = `
-            <a href="${trUrl}" class="lang-switch-btn${trActive ? ' active' : ''}" aria-label="Türkçe">TR</a>
+            <a href="${trUrl}" class="lang-switch-btn${trActive ? ' active' : ''}" data-lang="tr" lang="tr" aria-label="Türkçe" aria-pressed="${trActive ? 'true' : 'false'}">TR</a>
             <span class="lang-divider">|</span>
-            <a href="${enUrl}" class="lang-switch-btn${enActive ? ' active' : ''}" aria-label="English">EN</a>
+            <a href="${enUrl}" class="lang-switch-btn${enActive ? ' active' : ''}" data-lang="en" lang="en" aria-label="English" aria-pressed="${enActive ? 'true' : 'false'}">EN</a>
         `;
         topBarInner.appendChild(switcher);
     }
@@ -517,6 +580,7 @@ const I18N = (function() {
         const lang = window.location.pathname.includes('/en/') ? 'en' : 'tr';
         injectSwitcher();
         applyLang(lang);
+        loadExternalDictionaries().then(() => applyLang(lang));
     }
 
     // Public API
