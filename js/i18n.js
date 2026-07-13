@@ -48,7 +48,7 @@ const I18N = (function() {
     dict['index.welcome.stat1']      = { tr: 'Kuruluş', en: 'Established' };
     dict['index.welcome.stat2']      = { tr: 'Yıl Deneyim', en: 'Years Experience' };
     dict['index.welcome.stat3']      = { tr: 'Merkez', en: 'Headquarters' };
-    dict['index.news.title']         = { tr: '<span class="highlight">Bizden</span> Haberler', en: 'News <span class="highlight">from Us</span>' };
+    dict['index.news.title']         = { tr: '<span class="highlight">Bizden</span> Haberler', en: 'Company <span class="highlight">News</span>' };
     dict['index.news.heading']       = { tr: 'Yeni Web Sitemiz Yayında!', en: 'Our New Website is Live!' };
     dict['index.news.body']          = { tr: 'Almed Medikal olarak, yenilenen web sitemizle artık dijital dünyada da güçlü bir şekilde varız. Tüm ürün kataloğumuzu, teknik detayları ve güncel gelişmeleri bu platform üzerinden takip edebilirsiniz. Daha hızlı, daha kapsamlı ve daha modern bir deneyim sunmaktan mutluluk duyuyoruz.', en: 'As Almed Medikal, we now have a strong presence in the digital world with our renewed website. You can follow our entire product catalog, technical details, and latest developments on this platform. We are happy to offer a faster, more comprehensive, and more modern experience.' };
     dict['index.news.tag']           = { tr: 'Duyuru', en: 'Announcement' };
