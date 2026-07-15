@@ -1085,4 +1085,90 @@ html::after {
   }
 }
 
+/* Specifications Grid Layout */
+.specs-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 36px;
+}
+
+.spec-item {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(11, 67, 156, 0.08) !important;
+  border-radius: var(--radius-sm) !important;
+  padding: 18px 20px !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s var(--ease-out);
+}
+
+.spec-item:hover {
+  border-color: rgba(0, 180, 216, 0.3) !important;
+  box-shadow: var(--shadow-md) !important;
+  transform: translateY(-2px);
+}
+
+.spec-label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.spec-value {
+  display: block;
+  color: var(--text-primary);
+  font-weight: 800;
+  line-height: 1.4;
+  margin-top: 6px;
+  font-size: 0.95rem;
+}
+
+/* Premium Description Box and Info Panel */
+.desc-box, .info-panel {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(11, 67, 156, 0.08) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 28px 32px !important;
+  box-shadow: var(--shadow-md) !important;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s var(--ease-out);
+}
+
+.desc-box:hover, .info-panel:hover {
+  border-color: rgba(0, 180, 216, 0.25) !important;
+  box-shadow: var(--shadow-lg) !important;
+  transform: translateY(-2px);
+}
+
+.desc-box::before, .info-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-brand);
+}
+
+/* Lightbox Premium styling */
+.lightbox-overlay {
+  background: rgba(10, 15, 30, 0.96) !important;
+}
+.lightbox-controls {
+  background: rgba(11, 67, 156, 0.15) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+
+
 

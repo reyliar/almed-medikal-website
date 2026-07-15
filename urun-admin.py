@@ -288,10 +288,36 @@ def build_detail_page(lang, title, cat_name, intro, img_url, specs_content, usag
     # Generate Specs Box
     specs_section = ""
     if specs_content.strip():
-        formatted_specs = specs_content.replace('\n', '<br>')
+        lines = [l.strip() for l in specs_content.split('\n') if l.strip()]
+        items = []
+        has_colon = any(':' in l for l in lines)
+        if has_colon:
+            for line in lines:
+                if ':' in line:
+                    parts = line.split(':', 1)
+                    items.append((parts[0].strip(), parts[1].strip()))
+                else:
+                    items.append(("", line))
+        else:
+            i = 0
+            while i < len(lines):
+                if i + 1 < len(lines):
+                    items.append((lines[i], lines[i+1]))
+                    i += 2
+                else:
+                    items.append(("", lines[i]))
+                    i += 1
+        
+        items_html = ""
+        for label, val in items:
+            if label:
+                items_html += f"""<div class="spec-item"><span class="spec-label">{label}</span><span class="spec-value">{val}</span></div>"""
+            else:
+                items_html += f"""<div class="spec-item"><span class="spec-value">{val}</span></div>"""
+        
         specs_section = f"""<h2 style="font-size:1.3rem;font-weight:800;margin-bottom:18px;">{spec_title}</h2>
-<div class="specs-box" style="line-height:1.7;font-size:0.95rem;color:var(--text-secondary);background:var(--white);border:1px solid var(--border-light);border-radius:8px;padding:24px;box-shadow:var(--shadow-sm)">
-{formatted_specs}
+<div class="specs-table reveal">
+{items_html}
 </div>"""
 
     # Generate Gallery HTML matching ilkyardim-cantasi.html
