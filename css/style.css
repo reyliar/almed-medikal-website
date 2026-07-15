@@ -275,7 +275,7 @@ body::before {
 .footer-bottom-links { display:flex; gap:24px; list-style:none; }
 .footer-bottom-links a { color:rgba(255,255,255,.4); text-decoration:none; transition:color var(--duration-fast) var(--ease-out); }
 .footer-bottom-links a:hover { color:var(--white); }
-.footer-reyliar { height:22px; width:auto; filter:brightness(0) invert(1); opacity:.55; transition:opacity var(--duration-fast) var(--ease-out); vertical-align:middle; margin-left:auto; }
+.footer-reyliar { height:40px; width:auto; filter:brightness(0) invert(1); opacity:.55; transition:opacity var(--duration-fast) var(--ease-out); vertical-align:middle; margin-left:auto; }
 .footer-reyliar:hover { opacity:1; }
 
 .products-hero { background:var(--gradient-hero); padding:140px 32px 60px; text-align:center; }
