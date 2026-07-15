@@ -2,6 +2,30 @@
    ALMED MEDIKAL - 2026 INTERACTIVE SCRIPTS
    ============================================================ */
 
+// === Dev Console & Right-Click Protection ===
+(function() {
+    'use strict';
+    // Right-click block
+    document.addEventListener('contextmenu', function(e) { e.preventDefault(); return false; });
+    // Keyboard shortcut block (F12, Ctrl+Shift+I/J/C, Ctrl+U)
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'F12' ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C' || e.key === 'i' || e.key === 'j' || e.key === 'c')) ||
+            (e.ctrlKey && (e.key === 'U' || e.key === 'u')) ||
+            (e.ctrlKey && e.shiftKey && e.key === 'F12')) {
+            e.preventDefault();
+            return false;
+        }
+    });
+    // DevTools detection via debugger timing
+    setInterval(function() {
+        var start = performance.now();
+        debugger;
+        var end = performance.now();
+        if (end - start > 100) { document.body.innerHTML = ''; window.location.reload(); }
+    }, 1000);
+})();
+
 // === Hero Mavi Partikül Sistemi ===
 (function initHeroParticles() {
     const hero = document.querySelector('.hero');
