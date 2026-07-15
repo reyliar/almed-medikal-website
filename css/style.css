@@ -278,7 +278,7 @@ body::before {
 .footer-reyliar { height:40px; width:auto; filter:brightness(0) invert(1); opacity:.55; transition:opacity var(--duration-fast) var(--ease-out); vertical-align:middle; }
 .footer-reyliar:hover { opacity:1; }
 .footer-reyliar-group { display:flex; align-items:center; gap:8px; margin-left:auto; }
-.footer-webmaster { color:rgba(255,255,255,.55); font-size:.78rem; font-weight:600; letter-spacing:.02em; transition:color var(--duration-fast) var(--ease-out); white-space:nowrap; }
+.footer-webmaster { color:rgba(255,255,255,.55); font-size:.78rem; font-weight:600; letter-spacing:.02em; transition:color var(--duration-fast) var(--ease-out); white-space:nowrap; text-decoration:none; }
 .footer-webmaster:hover { color:var(--white); }
 
 .products-hero { background:var(--gradient-hero); padding:140px 32px 60px; text-align:center; }
