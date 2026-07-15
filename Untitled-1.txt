@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<title>Tüm Ürünler</title>
+<meta name="Keywords" content="Tüm Ürünler" />
+<meta name="Description" content="Tüm Ürünler" />
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name = "format-detection" content = "telephone=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="style.css">
+<link href="assets/css/animate.css" rel="stylesheet" />
+<link rel="icon" type="image/png" href="assets/img/fav.png" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<script src="assets/js/jquery.min.js"></script>
+<link rel="stylesheet" href="https://www.baykalrezistans.com/assets/Fram_Works/carousel/dist/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+<link href="assets/css/twentytwenty.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+</head>
+<body>
+<div class="wrapper">
+<style>
+.top-social {background-color:#c2151a !important}
+.top-menu {
+width: 100%;
+background-color: #f8f8f8;
+color: #fff;
+height: 35px;
+overflow: hidden;
+font-weight: 300;
+border-bottom: 1px solid #eee;
+}
+.top-menu a:hover {
+text-decoration: none;
+}
+.top-contact {
+width: 72%;
+padding: 4px 0px;
+height: 35px;
+}
+.top-contact ul {
+display: flex;
+justify-content: flex-start;    left: 26px;
+position: relative;
+}
+.top-contact ul li {
+display: inline-block;
+padding: 0px 6px;
+color: #fff;
+}
+.top-contact ul li span {
+padding-right: 5px;    color: #111;
+}
+.top-contact ul li a {
+color: #111;
+font-size: 15px;    font-weight: 400;
+}
+.top-social {
+width: 53%;
+margin-top: 0px;
+height: 35px;
+padding: 5px 0px;
+background-color: #0b4c9f;
+font-size: 16px;
+border-left: 0px solid #fff;
+position: relative;
+}
+.top-social::before {
+border-color: #c2151a #c2151a #c2151a #c2151a;
+border-style: solid;
+border-width: 36px;
+width: 0px;
+height: 0px;
+transform: rotate(164deg);
+position: absolute;
+left: -36px;
+top: -1px;
+display: block;
+content: "";
+-moz-transform: rotate(164deg);
+-webkit-transform: rotate(214deg);
+}
+.top-social::after {
+border-color: #c2151a #c2151a #c2151a #c2151a;
+border-style: solid;
+border-width: 56px;
+width: 120px;
+height: 0px;
+transform: rotate(197deg);
+position: absolute;
+right: -109px;
+top: -20px;
+display: block;
+content: "";
+-moz-border-color: transparent transparent #fff #fff;
+-moz-border-style: solid;
+-moz-transform: rotate(197deg);
+-webkit-transform: rotate(197deg);
+}
+.top-social ul {
+display: flex;
+justify-content: flex-end;
+}
+.top-social ul li {
+display: inline-block;
+padding: 0px 9px;
+position: relative;
+color: #fff;
+font-weight: 400;
+z-index: 300;
+}
+.top-social ul li:hover .lang {
+transform: translateY(-30px);
+padding: 6px 0px;
+visibility: visible;
+height: 35px;
+opacity: 1;
+background-color: #0b4c9f;
+}
+.top-social ul li a {
+color: #fff;
+}
+</style>
+<div class="wrapper">
+<div class="top-menu">
+<div class="container-flex">
+<div class="top-contact">
+<ul>
+<li>
+<span>
+<i class="fas fa-phone" aria-hidden="true"></i>
+</span>
+<a href="tel:+90 212 223 59 88">+90 212 223 59 88</a>
+</li>
+<li>
+<span>
+<i class="fas fa-paper-plane" aria-hidden="true"></i>
+</span>
+<a href="mailto:atotest@atotest.com.tr">atotest@atotest.com.tr</a>
+</li>
+</ul>
+</div>
+<div class="top-social">
+<ul class="p0">
+<p style="color: #fff;right: 19px;position: relative;    font-size: 14px;
+top: 3px;">Bizi Takip Edebilirsiniz</p>
+<li><a target="_blank" href="#" aria-label="Facebook"><i class="fab fab fa-instagram"></i></a></li>
+<li><a target="_blank" href="https://www.linkedin.com/company/atotest-laboratuar-cihazlar%C4%B1/" aria-label="Facebook"><i class="fab fab fa-linkedin"></i></a></li>
+<li><a target="_blank" href="https://www.youtube.com/@atotest2680" aria-label="Facebook"><i class="fab fab fa-youtube"></i></a></li>
+</ul>
+</div>
+</div>
+</div>
+<header id="header">
+<div class="container-flex" style="display:flex !important;">
+<div class="logo-box">
+<a href="./">   <img src="assets/img/logo.png" alt=""></a>
+</div>
+<style>.links { display:none; }
+.toggle {
+display: none;
+position: absolute;
+top: 10px;
+right: 0
+}
+.mobilres { width:auto;}
+#outer {
+float: right;
+padding-right: 0
+}
+.menu-icon-wrapper {
+position: relative;
+border: 1px solid #ddd;
+left: 0;
+top: 0;
+width: 36px;
+height: 34px;
+pointer-events: none;
+transition: .1s
+}
+.menu-icon-wrapper svg {
+position: absolute;
+top: -18px;
+left: -18px;
+transform: scale(.07);
+transform-origin: 0 0
+}
+.menu-icon-wrapper svg path {
+stroke: #404040;
+stroke-width: 40px;
+stroke-linecap: round;
+stroke-linejoin: round;
+fill: transparent;
+transition: stroke-dasharray .5s
+}
+.menu-icon-wrapper svg path.path1 {
+stroke-dashoffset: 5803.15px;
+stroke-dasharray: 2901.57px, 2981.57px, 240px
+}
+.menu-icon-wrapper svg path.path2 {
+stroke-dashoffset: 800px;
+stroke-dasharray: 400px, 480px, 240px
+}
+.menu-icon-wrapper svg path.path3 {
+stroke-dashoffset: 6993.11px;
+stroke-dasharray: 3496.56px, 3576.56px, 240px
+}
+.menu-icon-wrapper.open svg path.path1 {
+stroke-dasharray: 2901.57px, 5258.15px, 240px
+}
+.menu-icon-wrapper.open svg path.path2 {
+stroke-dasharray: 400px, 600px, 0
+}
+.menu-icon-wrapper.open svg path.path3 {
+stroke-dasharray: 3496.56px, 6448.11px, 240px
+}
+.menu-icon-wrapper .menu-icon-trigger {
+position: relative;
+width: 100%;
+height: 100%;
+cursor: pointer;
+pointer-events: auto;
+background: 0 0;
+margin: 0;
+padding: 0;
+border: none
+}
+/* Responsive */
+.pd60 { padding-top: 60px; }
+.geributon { display:none;}
+.cc {     padding-top: 14px;
+position: absolute;
+left: 29%;}
+@media (max-width:600px) {
+	.swiper-wrapper { height:150px !important; }
+	.swiper-wrapper img{ object-fit:fill !important; }
+		.clo { margin-top:20px !important; margin-top:20px !important; }
+.img-container  { margin-top:30px !important;}
+.galeri-img { width:30% !important; } 
+.detail-text { padding-left:0px !important; }
+.tab-block .tab-mnu li { width:100% !important; }
+.categorie-img::before { width:100% !important; }
+.categorie-img { height:195px !important; }
+.categorie-img img { height:140px; }
+.categories{ margin-top:20px; padding-left:0px !important; }
+.content{ padding:0px 0px !important; }
+.banner-top h1{ top:0px !important;}
+.footer-bottom .footer-nav{ text-align:left !important; }
+.yukari{ margin-bottom:20px !important; }
+.itom { margin-bottom:20px !important; }
+.copyright { text-align:left !important;font-size:13px !important;  }
+.video-container .caption { padding:41px !important; }
+.strk { top:0px !important; font-size:39px !important; }
+.logo-box img { max-width:140px !important;}
+.about-area .left-info h2{ font-size:20px !important;}
+.about-us .content-column .text-box {     width: 299px;
+margin: 0 auto; }
+.tab-mnu li p { font-size:14px !important; padding:10px; }
+.banner-text { padding-top:100px !important; width:77% !important; }
+.cc {     padding-top: 14px;
+position: absolute;
+left: 16%;}
+.banner-text h1 { letter-spacing:0 !important; }
+.content h2 {  }
+.h6 { font-size:13px !important; }
+table td { font-size:14px !important; }
+.production-detail { padding:16px !important; }
+.geributon { display:block !important; width:100%; text-align:center; background:#e58c23; color:#fff !important; padding:8px 29px; }
+.banner-texts { bottom:unset !important;   margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%); }
+.icerdegizle { display:none !important; }
+td img { width:100% !important; }
+#customers td { text-align:center !important; }
+.tab-block .tab-cont .tab-pane { overflow:scroll !important; }
+.detail { padding:13px !important; }
+.detail-image { left:0px !important; }
+.detail-image { margin-bottom:20px !important; }
+.detail-text h2::after { display:none !important; }
+.mySwiper2-d .swiper-slide { width:90% !important; margin:0 auto !important; }
+.bgic { background:#234597 !important; }
+.banner-texts { width:85% !important; }
+.banner-textss { width:85% !important; bottom:27% !important; }
+.bgcp2 { font-size:18px !important; }
+#ikform { padding:30px !important; }
+.ik-area > .ik-column{ width:95% !important; margin:0 auto !important; }
+.top-menu { display:none !important; }
+.banner-list { display:none !important; }
+.banner-top { margin-top:57px !important; }
+.about-left { width:100% !important; }
+.about-text p { word-spacing:-2px !important; }
+.about-right { width:98% !important; padding-left:0px !important; }
+.foot-left { display:block !important; }
+.news_section .news_slider .item p.etiket { width:100% !important; }
+.btn-style-two .btn-title { font-size:11px !important; }
+.image-column { display:none; }
+.about-us::before { display:none; }
+.about-us .content-column h2{ display:none !important; }
+.about-us .content-column .text-box { word-spacing:2px !important;     text-rendering: optimizeLegibility;
+word-break: break-all; }
+.about-us .content-column .inner-column > span { margin-bottom:0px !important;}
+.detail-text { width:90% !important; margin:0 auto !important;  }
+.categorie-box { width:47% !important; }
+.urunler-sidebar { display:none; }
+.news-box { width:100% !important; }
+.galeri-img { width:30% !important; height:95px !important; }
+.content-text { padding-left:0px !important; padding-top:30px !important; }
+.cert{
+display:flex;
+flex-wrap:no-wrap;
+justify-content:space-between;
+border:1px solid #eee;
+font-size:13px;
+margin:0 0 10px 0
+}
+.cert>.cr{
+display:block;
+height:auto;
+line-height:normal;
+padding:10px;
+width:20% !important;
+}
+.cert>.cr span.icon{
+width:50px;
+height:50px;
+display:block;
+overflow:hidden;
+background:url("https://www.tempes.com.tr/assets/images/svg/cert.svg") center center no-repeat;
+background-size:100%
+}
+.cert>.cr:nth-child(1){
+width:20% !important;
+}
+.cert>.cr:nth-child(3){
+width:auto;
+text-align:right
+}
+.contact-info { padding-right:0px !important; border-right:none !important; }
+.service_section .container .content { padding:40px; }
+.about-us { padding: 50px 0 1px !important;}
+.pd60 { padding-top: 10px; }
+.about-us .content-column .inner-column { padding-left:0px !important; }
+.about-us .image-column .image {     height: 333px !important; margin-top:-15px !important; }
+.about-us .image-column .image .content{ height:270px !important; }
+.slider .swiper-container { height:239px !important; }
+.slider { top:85px !important; }
+.sticky .logo-box img { top:5px !important; }
+header { background-color:#fff;}
+.about-text span { font-size:26px;}
+.about-text h2 { font-size:24px;}
+.categories { width:100%;}
+.detail { width:92%;  display:block !important; }
+.banner-top h1 { font-size:17px; }
+.news-box { width:96%; }
+.banner-list ul li a { font-size:10px; margin-left:2px; }
+.production-detail { display:block;}
+.production-detail-text { width:100%;}
+.production-detail-img { width:95%; }
+.detail-image {  width:100%; }
+.detail-text { width:96%;}
+.categorie-box { width:44%; }
+.categorie-img { height:239px;}
+.content-text { width:100%;}
+.galeri-img { width:44%; }
+.prods .container-flex:first-child p { padding:6px; }
+aside { width:100%; min-height:auto;}
+footer .container-flex { padding:20px; }
+.mobildegizle { display:none; }
+.e-bulten h2 { width:33%; margin-left:10px;}
+.e-blt-form { width:65%;}
+.foot-links { width:100%;}
+.foot-title { width:100%;}
+.slider-text { top:60%;}
+.container-flex { display:block !important; }
+.prods-left { width:100%;}
+.prods-right { width:96%; margin-top:20px;}
+.about-left { width:100%; padding-right:0px;}
+.about-right { width:100%;}
+.about-icon { width:47%;}
+.slider-text h2 { width:100%; font-size:21px; }
+.slider-text p { padding: 5px 20px; }
+.slider-text a { padding:8px 20px; }
+.search  { display:none; }
+.lang { width:27%; top:28px;}
+.logo-box { width:58% !important; }
+.contact-form { margin-top:36px; padding-left:0px !important;}
+.news-text { width:100%; }
+.content { width:98%; margin:0 auto;}
+.banner-list ul li:first-child { display:none;}
+.mp-img {    height: 200px;}
+.links { display:block; }
+.nav-list {
+display:none !important;
+}
+.toggle {
+display: block!important;
+margin-right:30px;
+margin-top:10px;
+}
+.logo-box {
+max-width: 51%;
+padding-top: 50px;
+transition: all 0.3s;
+padding-left: 15px;
+}
+.links {
+position: fixed;
+top: 0;
+left: -1000px;
+transition: .6s;
+width: 80%;
+box-shadow: 0 3px 12px rgba(0, 0, 0, .08);
+height: 100%;
+z-index: 99;
+background-color: #c1161a;
+color:#fff;
+padding-top: 20px;
+padding-right: 10px;
+padding-left: 10px;
+overflow-y: auto
+}
+.links.is-active {
+left: 0;
+transition: .6s
+}
+.links ul li.list_item {
+float: none
+}
+.links ul li.list_item a {
+display: block;
+border-right: 0;
+padding: 5px 5px;
+color:#fff;
+}
+.links ul li.list_item>.big_drop {
+margin: 0;
+position: relative;
+padding: 0;
+display: block;
+}
+.links ul li.list_item>.big_drop>li>a {
+width:80%;
+border-bottom: 0;
+}
+.icon_plus { z-index:9999; margin-top:8px;}
+.link a{ color: #fff; padding:10px; border-bottom:solid 1px #ffffff2e; width:100%; float:left; }
+.sub-nav {
+overflow: hidden;
+position: relative!important;
+top: 1px!important;
+min-width: 240px;
+padding: 0 5px 10px;
+opacity: 1;
+z-index: 9;
+display: none;
+}
+.links ul li.active .sub-nav {
+display: block!important;
+min-width: 60px!important;
+max-width: 100%!important;
+}
+.logo-box { padding-top:1px;
+}
+header.sticky .logo-box {
+max-width: 48%;
+padding-top: 18px;
+}
+header {     position: fixed;
+top: 0px;
+height: 85px;
+/* padding-top: 3px; */
+padding: 5px 0px;}
+.mp-box { width:100%;}
+footer .container { display:block !important;}
+.foot-about { width:100%;}
+.foot-contact { width:100%; }
+.banner-left { width:70%;
+}
+.banner-right {
+width: 31%;
+display: flex;
+justify-content: flex-end;
+padding-top: 0px;
+}
+.main-photo {
+width: 100%;
+height: 20vh;
+margin-top:65px;
+}
+.foot-social { width:100%; }
+.mobilres { width: 100%;
+padding: 21px;}
+.banner-top h2 {margin-top:-10px; font-size:20px;}
+.products-detail .left ul li { width:100%;}
+.banner-top{ margin-top:57px;}
+.foot-left {float:left; width:100%; padding:7px; text-align:center; font-size:12px;}
+.foot-right {float:left; width:100%;  text-align:center; display:block !important;}
+.alt-footer .container { display:inline-block;}
+.products-detail .left { width:100%;}
+.products-detail { display:block;}
+.products-detail .right { width:100%; padding-left:0px;}
+.sidebar-fixed { display:block; position:relative;}
+.contact .container {display:block;}
+.contact-form {width:100%;}
+.contact-info { width:100%;}
+.products-detail.dty {display:inline-block !important}
+}
+</style>
+<div class="toggle">
+<div class="menu_open">
+<div id="outer">
+<div id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: visible;">
+<svg width="1000px" height="1000px">
+<path class="path1" d="M 300 400 L 700 400 C 900 400 900 750 600 850 A 400 400 0 0 1 200 200 L 800 800"></path>
+<path class="path2" d="M 300 500 L 700 500"></path>
+<path class="path3" d="M 700 600 L 300 600 C 100 600 100 200 400 150 A 400 380 0 1 1 200 800 L 800 200"></path>
+</svg>
+<button id="menu-icon-trigger" class="menu-icon-trigger"></button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="links">
+<ul>
+<li class="link " style="float:left;  width:100%;"> <a style="float:left; width:90%;"
+href="./"  > ANA SAYFA </a> </li><li class="link dropdown" style="float:left;  width:100%;"> <a style="float:left; width:90%;"
+ > KURUMSAL </a> <i style="float:left; width:10%; z-index:999999; font-size:21px; cursor:pointer;" class="icon_plus">+</i> <div class="sub-nav">
+<ul ><li><a style="color:#fff;" href="icerik.php?id=1725452961" >Hakkımızda</a></li><li><a style="color:#fff;" href="icerik.php?id=1725453001" >Vizyon & Misyon</a></li><li><a style="color:#fff;" href="icerik.php?id=1737714778" >Kalite Politikası</a></li><li><a style="color:#fff;" href="icerik.php?id=1747305529" >Tanıtım Filmi</a></li></ul></div></li><li class="link dropdown" style="float:left;  width:100%;"> <a style="float:left; width:90%;"
+ > ÜRÜNLERİMİZ </a> <i style="float:left; width:10%; z-index:999999; font-size:21px; cursor:pointer;" class="icon_plus">+</i> <div class="sub-nav"><ul>
+<li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453637" >
+Havada Partikül Sayım Cihazları  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1747233549" >
+Tepe Gazı Ölçüm Sistemleri  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1751453735" >
+Su Sistemleri  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1777022190" >
+Gerçek Zamanlı Mikrobiyal İzleme Cihazları   </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453761" >
+Mikrobiyolojik Hava Örnekleme Cihazları   </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1743147079" >
+Temiz Oda Sterilizatörleri  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453701" >
+Sıvı Partikül Analiz Cihazları  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453743" >
+Toplam Organik Karbon Analizörleri  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453749" >
+Su Arıtma Sistemleri  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453772" >
+Amino Asit Analizörleri  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453783" >
+İyon Kromotografisi  </a>
+</li><li>
+<a style="color:#fff;" href="kategoriler.php?kid=1725453794" >
+Antibiyotik Zone Reader ve Colony Counter  </a>
+</li></ul></div>
+</li><li class="link " style="float:left;  width:100%;"> <a style="float:left; width:90%;"
+href="icerik.php?id=1725452822"  > REFERANSLARIMIZ </a> </li><li class="link dropdown" style="float:left;  width:100%;"> <a style="float:left; width:90%;"
+ > ETKİNLİKLER </a> <i style="float:left; width:10%; z-index:999999; font-size:21px; cursor:pointer;" class="icon_plus">+</i> <div class="sub-nav">
+<ul ><li><a style="color:#fff;" href="haberler.php" >Faaliyetler</a></li><li><a style="color:#fff;" href="icerik.php?id=1748245018" >Videolar</a></li><li><a style="color:#fff;" href="icerik.php?id=1748248098" >Atotest 35 Yaşında</a></li><li><a style="color:#fff;" href="icerik.php?id=1748248290" >Meco WFI Sunumu</a></li><li><a style="color:#fff;" href

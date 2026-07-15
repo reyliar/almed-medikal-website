@@ -1,0 +1,7 @@
+Ekran boyutu: 1440x1000
+Kaydirma adimi: 900px (100px ortusme)
+Toplam sayfa: 32
+Toplam ekran goruntusu: 110
+Turkce sayfa: 16
+Ingilizce sayfa: 16
+Hata: 0
