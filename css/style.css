@@ -1281,6 +1281,12 @@ html::after {
   transform: translateY(-4px) scale(1.02);
 }
 
+/* Make detail description under title white */
+.detail-hero .detail-intro {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+
 
 
 
