@@ -7,29 +7,29 @@
 
 /* === CSS Variables === */
 :root {
-  --primary: #0066cc;
-  --primary-dark: #004b99;
-  --primary-light: #3399ff;
-  --primary-bg: #e8f2fd;
-  --accent: #0080dd;
-  --accent-dark: #005fa3;
+  --primary: #0b439c;
+  --primary-dark: #072e6e;
+  --primary-light: #256fe3;
+  --primary-bg: #f0f7ff;
+  --accent: #00b4d8;
+  --accent-dark: #0096b4;
   --white: #ffffff;
   --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
+  --bg-secondary: #edf2f7;
   --bg-card: #ffffff;
-  --border-light: #e2e8f0;
-  --border-medium: #cbd5e1;
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --border-light: rgba(11, 67, 156, 0.08);
+  --border-medium: rgba(11, 67, 156, 0.16);
+  --text-primary: #0a1128;
+  --text-secondary: #3f4e66;
+  --text-muted: #8292b0;
   --text-inverse: #ffffff;
-  --gradient-brand: linear-gradient(135deg, #0066cc 0%, #3399ff 100%);
-  --gradient-hero: linear-gradient(160deg, #f0f7ff 0%, #e8f2fd 40%, #f8fafc 100%);
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
-  --shadow-md: 0 4px 16px rgba(0,0,0,0.06), 0 2px 6px rgba(0,0,0,0.04);
-  --shadow-lg: 0 12px 40px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.04);
-  --shadow-xl: 0 20px 60px rgba(0,0,0,0.1), 0 8px 20px rgba(0,0,0,0.05);
-  --shadow-brand: 0 8px 30px rgba(0,102,204,0.2);
+  --gradient-brand: linear-gradient(135deg, #0b439c 0%, #00b4d8 100%);
+  --gradient-hero: linear-gradient(160deg, #ecf5ff 0%, #e0f2fe 45%, #f8fafc 100%);
+  --shadow-sm: 0 2px 8px rgba(11, 67, 156, 0.04);
+  --shadow-md: 0 8px 24px rgba(11, 67, 156, 0.06), 0 2px 6px rgba(11, 67, 156, 0.02);
+  --shadow-lg: 0 20px 48px rgba(11, 67, 156, 0.08), 0 4px 12px rgba(11, 67, 156, 0.03);
+  --shadow-xl: 0 32px 72px rgba(11, 67, 156, 0.12), 0 8px 24px rgba(11, 67, 156, 0.05);
+  --shadow-brand: 0 8px 30px rgba(11, 67, 156, 0.2);
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-heading: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --radius-xs: 6px;
@@ -49,7 +49,43 @@
 
 *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; -webkit-font-smoothing:antialiased; }
-body { font-family:var(--font-body); background:var(--bg-primary); color:var(--text-primary); line-height:1.7; overflow-x:hidden; font-size:16px; font-weight:400; }
+body {
+  font-family:var(--font-body);
+  background:var(--bg-primary);
+  color:var(--text-primary);
+  line-height:1.7;
+  overflow-x:hidden;
+  font-size:16px;
+  font-weight:400;
+  position: relative;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(11, 67, 156, 0.2);
+  border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-light);
+}
+
+/* Medical Tech Grid Background */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: radial-gradient(rgba(11, 67, 156, 0.035) 1px, transparent 1px);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: -2;
+}
 
 #preloader { position:fixed; inset:0; background:var(--white); z-index:99999; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:20px; transition:opacity .5s ease,visibility .5s ease; }
 #preloader.hidden { opacity:0; visibility:hidden; pointer-events:none; }
@@ -452,8 +488,10 @@ body { font-family:var(--font-body); background:var(--bg-primary); color:var(--t
 }
 
 .showcase-card {
-  background: var(--white);
-  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(11, 67, 156, 0.08);
   border-radius: var(--radius-xl);
   overflow: hidden;
   transition: all 0.5s var(--ease-out);
@@ -463,10 +501,21 @@ body { font-family:var(--font-body); background:var(--bg-primary); color:var(--t
   position: relative;
 }
 
+.showcase-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
 .showcase-card:hover {
-  transform: translateY(-8px) rotateY(4deg) rotateX(-3deg);
-  box-shadow: 0 30px 70px rgba(0,0,0,0.12), 0 10px 30px rgba(0,102,204,0.08);
-  border-color: var(--primary-light);
+  transform: translateY(-8px) translateZ(10px);
+  box-shadow: var(--shadow-xl), 0 0 20px rgba(0, 180, 216, 0.12);
+  border-color: rgba(0, 180, 216, 0.35);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .showcase-img-wrap {
@@ -756,3 +805,129 @@ body { font-family:var(--font-body); background:var(--bg-primary); color:var(--t
 /* EXPANDABLE CATEGORIES */.category-card{cursor:pointer}.category-detail{max-height:0;overflow:hidden;transition:max-height .5s var(--ease-out),padding .5s var(--ease-out),opacity .4s ease;opacity:0}.category-detail.open{max-height:300px;opacity:1;padding-top:16px}.category-detail ul{list-style:none;display:flex;flex-direction:column;gap:8px}.category-detail li{font-size:.85rem;color:var(--text-secondary);padding:8px 12px;background:var(--bg-secondary);border-radius:var(--radius-sm);line-height:1.5}.cat-arrow{transition:transform .3s var(--ease-out);font-size:.7rem;margin-left:6px;color:var(--text-muted)}.cat-arrow.rotated{transform:rotate(180deg)}
 
 /* EXPANDABLE LIST ITEMS */.about-lists li{cursor:pointer;position:relative;flex-wrap:wrap}.li-arrow{margin-left:auto;font-size:.65rem;color:var(--text-muted);transition:transform .3s}.li-arrow i.rotated{transform:rotate(180deg)}.li-detail{width:100%;max-height:0;overflow:hidden;transition:max-height .4s ease,padding .4s ease;font-size:.82rem;color:var(--text-secondary);line-height:1.6;padding:0 0 0 22px}.li-detail.open{max-height:200px;padding:10px 0 12px 22px}
+
+/* ============================================================
+   MED-TECH PREMIUM ENHANCEMENTS
+   ============================================================ */
+
+/* Sleek spotlight spot gradients on backgrounds */
+.hero, .detail-hero, .products-hero {
+  background: var(--gradient-hero) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after, .detail-hero::after, .products-hero::after {
+  content: '';
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 180, 216, 0.08) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Glassmorphic Navigation Bar */
+.navbar {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(11, 67, 156, 0.08) !important;
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-bottom: 1px solid rgba(11, 67, 156, 0.15) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* Welcome Card Premium Design */
+.welcome-card {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(11, 67, 156, 0.08) !important;
+  border-radius: var(--radius-xl) !important;
+  box-shadow: var(--shadow-lg) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--gradient-brand);
+}
+
+/* Overrides for product detail boxes */
+.desc-box, .specs-box {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(11, 67, 156, 0.08) !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transition: all 0.3s var(--ease-out);
+}
+
+.desc-box:hover, .specs-box:hover {
+  border-color: rgba(0, 180, 216, 0.3) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* High Contrast Technical Badges */
+.detail-tag, .showcase-tag {
+  background: var(--primary-bg) !important;
+  color: var(--primary) !important;
+  border: 1px solid rgba(11, 67, 156, 0.15) !important;
+  box-shadow: 0 2px 8px rgba(11, 67, 156, 0.04);
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+}
+
+.detail-tag::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: inline-block;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+
+/* Premium Highlight Accents on lists */
+.specs-table tr:hover {
+  background: rgba(11, 67, 156, 0.02) !important;
+}
+
+.specs-table td {
+  border-bottom: 1px solid rgba(11, 67, 156, 0.06) !important;
+}
+
+/* Spotlight visualizations on image wrappers */
+.showcase-img-wrap {
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.8) 0%, rgba(237, 242, 247, 0.8) 100%) !important;
+  border-bottom: 1px solid rgba(11, 67, 156, 0.05);
+}
+
+.hero-visual {
+  background: rgba(255, 255, 255, 0.85) !important;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(11, 67, 156, 0.08) !important;
+  box-shadow: var(--shadow-md) !important;
+  border-radius: var(--radius-md) !important;
+  transition: all 0.4s var(--ease-out);
+}
+
+.hero-visual:hover {
+  box-shadow: var(--shadow-lg) !important;
+  border-color: rgba(0, 180, 216, 0.25) !important;
+}
+
