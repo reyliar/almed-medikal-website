@@ -554,12 +554,15 @@ const I18N = (function() {
 
         const path = window.location.pathname;
         const isEn = path.includes('/en/');
-        const filename = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+        let filename = path.substring(path.lastIndexOf('/') + 1);
+        if (filename === 'index.html' || filename === '') {
+            filename = '';
+        }
         
-        // On /en/ pages: TR goes to ../page.html, EN stays
-        // On root pages: TR stays, EN goes to en/page.html
-        const trUrl = isEn ? '../' + filename : filename;
-        const enUrl = isEn ? filename : 'en/' + filename;
+        // On /en/ pages: TR goes to ../page, EN stays
+        // On root pages: TR stays, EN goes to en/page
+        const trUrl = isEn ? '../' + filename : filename || './';
+        const enUrl = isEn ? filename || './' : 'en/' + filename;
         const trActive = !isEn;
         const enActive = isEn;
 
