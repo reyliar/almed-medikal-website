@@ -1287,7 +1287,7 @@ html::after {
 }
 
 /* Make detail description under title white */
-.detail-hero .detail-intro {
+.detail-hero p, .detail-hero .detail-intro {
   color: rgba(255, 255, 255, 0.95) !important;
 }
 
